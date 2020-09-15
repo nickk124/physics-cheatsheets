@@ -1,0 +1,393 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{float}
+\usepackage{physics}
+\usepackage{minibox}
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\begin{document}
+	\fontsize{6pt}{7pt}\selectfont
+	{\LARGE Remember J NOT kJ, and account for MOLES}
+\\\minibox[frame]{\textbf{Heat Engines}
+		
+		\\efficiency $ e = \frac{\text{benefit}}{\text{cost}}=\frac{W}{Q_h}=1-\frac{Q_c}{Q_h}$
+		\\$Q_h=Q_c+W\qquad e\leq 1-\frac{T_c}{T_h}$
+		\\ \textbf{Carnot Cycle}: Max possible efficiency
+		\\But too slow for real use
+		\\1. isothermal expansion at $T_h$ (heat abs.)
+		\\2. adiabatic expansion to $T_c$
+		\\3. isothermal compression at $T_c$ (heat exp.)
+		\\4. adiabatic compression to $T_h$
+		\\\textbf{Real Heat Engines}
+		\\\textbf{Otto Cycle} (gasoline): 
+		\\$e = 1-\left(\frac{V_2}{V_1}\right)^{\gamma-1} \quad \gamma = (f+2)/f$
+		\\$V_2/V_1$ is the compression ratio
+		\\Fuel intake, two adiabatic processes, 
+		\\two constant V processes
+		\\Exhaust Process
+		\\\textbf{Diesel}:
+		\\$e=1-\frac{1}{\gamma}\frac{r_E^{-\gamma}-r_C^{-\gamma}}{r_E^{-1}-r_C^{-1}}$
+		\\\textbf{Binomial:} $(1+x)^n \simeq 1+nx+((n(n-1))x^2)/2$ 
+		
+		
+}
+\minibox[frame]{
+	\textbf{Refrigerators/AC}\\
+	
+	\\$\text{COP}=\frac{benefit}{cost}=\frac{Q_c}{W}=\frac{Q_c}{Q_h-Q_c}=\frac{T_c}{T_h-T_c}$
+	\\W is the energy drawn in from outside source
+	\\$\frac{Q_h}{Q_c}\geq\frac{T_h}{T_c}$
+	\\\textbf{Real Refrigerators: Joule-Thompson Process}
+	\\(Constriction/Throttling)
+	\\\includegraphics[width=0.18\linewidth]{../../Pictures/Screenshots/joulethomson}
+	\\$P_1, V_1 \rightarrow P_2, V_2\qquad \Delta U =U_2-U_1=W_{1-2}$
+	\\$\Delta U =-P_2V_2+P_1V_1\qquad U_2+P_2V_2=U_1+P_1V_1$
+	\\$COP = \frac{H_1-H_3}{H_2-H_1}$ ($H_3=H_4$)
+	\\Ex: from 12 bar to 1 bar: $H_{l,12} = H_{l,1}x+H_{g,1}(1-x)$ 
+	
+	
+	
+	
+	
+}
+\minibox[frame]{\textbf{Free Energy}
+	\\\includegraphics[width=0.15\linewidth]{../../Pictures/Screenshots/thermo}
+	\\Neg. G: spontaneous in forward
+	;G = 0: equil
+	\\PV: work done to put thing in environment
+	\\TS: energy obtained from environment
+	\\H: energy needed to created something
+	\\G: work done needed to create something minus the heat from env.
+	\\$F=U-TS\quad \Delta F = \Delta U - \Delta T S - T \Delta S \quad (\Delta F \leq W)_\text{const. T}$
+	\\$G = F + PV\quad\Delta G =\Delta H -\Delta T S - T\Delta S \quad (\Delta G \leq W_\text{other})_\text{const. T,P}$
+	\\Use F for const P, G for changing P and/or T
+	\\$\Delta G =\Delta U +P\Delta V- T\Delta S \qquad \Delta G = \Delta H -Q$
+	\\ $\Delta H = Q + W_\text{other}$
+	\\$G=U-TS+PV\ \qquad G=H-TS$
+	
+	
+\\\textbf{Thermodynamic Identities (IMPORTANT, derive partials} 
+	\\\textbf{from these be setting things constant)}
+\\$\diff U = T \diff S -P \diff V + \mu \diff N\qquad \diff H =T\diff S + V \diff P + \mu \diff N$
+\\$\diff F = -S\diff T -P\diff V + \mu\diff N\qquad\diff G = -S \diff T + V\diff P + \mu \diff N$
+\\if multiple particle types, use $\Sigma \mu_i \diff N_i$ instead of $\mu\diff N$.
+\\At const. T, V, N; F tends to decrease (thermal res.)
+\\At const. T, P, N; G tends to decrease (P, T res.)
+\\\textbf{Some Maxwell Relations}
+\\$\left(\pdv{S}{P}\right)_\text{T,N} = -\left(\pdv{V}{T}\right)_\text{P,N} \qquad \left(\pdv{S}{V}\right)_\text{T,N} = \left(\pdv{P}{T}\right)_\text{V,N}$
+\\(more can be derived from the thermodynamic identities)
+
+
+
+}
+\\\minibox[frame]{\textbf{Phase Changes}
+	\\On phase change line, (s/l for example,) $G_s=G_l$ (states in equil.)
+	\\Vapor pressure: where S \& L coexist
+	\\$V=\left(\pdv{G}{P}\right)_\text{N,T}\qquad S=-\left(\pdv{G}{T}\right)_\text{P,N}  \qquad \dv{P}{T} = \frac{\Delta S}{\Delta V}=\frac{L}{T\Delta V}$ (Cl-Clap)
+	\\The stable phase in the one with lower G; the more stable phase 
+	\\can change with change in P with different slopes (V) for each state 
+	\\(shown in G vs. P graph)
+	\\ $G_l=G_s \rightarrow \Delta G_l = \Delta G_s \rightarrow \mu_s=\mu_l$
+	\\ IG: $\frac{P(T)}{P_\infty}=\exp(-L/NkT)$
+($P_\infty$ can be found by plugging in known vals)
+\\\minibox[frame]{\textbf{Phase Transformations of Mixtures}
+	\\Unmixed A \& B: $G = (1-x)G^\circ_A+xG^\circ_B$ \textbf{(x is frac. of B molecules)}
+	\\$\Delta S_\text{mixing}=-R[x\ln x+(1-x)\ln (1-x)]$
+	\\Ideal Mixture: $G=(1-x)G^\circ_A+xG^\circ_B+RT[x\ln x +(1-x)\ln (1-x)]$
+	\\$\uparrow$ This is literally just $G=G_\text{unmixed}-T\Delta S_\text{mixing}$
+	\\Solubility gap means immiscible (bump in G vs. x graph)
+	\\\textbf{Miscible Mixtures}$\qquad\qquad \qquad\qquad$ \textbf{Eutectic System} (x axis is $x$)
+	
+	\\Lever rule: prop of L to G = $\frac{x-x_a}{x_b-x}$ (for mixtures at some T)
+	\\$x_a$ is comp. of gas phase at T, $x_b$ is comp of liquid phase. 
+	\\\minibox[frame]{\textbf{Non-ideal Mixtures}}
+		
+}	
+	
+	
+}
+
+
+
+}
+\minibox[frame]{
+	\minibox[frame]{\textbf{Fuel Cell}
+		\\ $\Delta G = W_\text{other}\quad V = \frac{\Delta G_\text{rxn}}{n_e \times -9.649\times 10^4}$  
+		\\$V = \frac{\text{electrical work}}{total charge}$
+		\\$n_e$ is the number of electrons \\pushed through the circuit.
+		\\Methane has $n_e$= 8, hydrogen cell has $n_e$=2
+		\\efficiency $=\frac{W_\text{other}}{\Delta H}$
+		\\Waste heat is $\Delta H - \Delta G$
+		\\Output work is $\Delta G$ (Maybe V as well)
+		
+		
+	}
+	\\\textbf{Isentropic Process:} Quasistatic Adiabatic, $\Delta S = 0$
+	\\\textbf{Chemical Potential}
+	\\ $\mu =\left(\pdv{G}{N}\right)_\text{T,P} \qquad G=\sum_i N_i\mu_i$
+	\\
+	\\\textbf{\large IDEAL GAS}:
+	\\IG: $\mu(T,P)=\mu^\circ(T)+kT\ln(P/P^\circ)$ \\$P^\circ$ is 1 bar
+	\\\textbf{Law of Mass Action Derivation Example}
+	\\Given $N_2+3H_2\leftrightarrow 2NH_3$:
+	\\$\mu_{N_2} + 3\mu_{H_2}=2\mu_{NH_3}$
+	\\$\mu_{N_2}^\circ+kT\ln\frac{P_{N_2}}{P^\circ}+3\mu^\circ_{H_2}+3kT\ln\frac{P_{H_2}}{P^\circ}=$
+	\\$2\mu^\circ_{NH_3}+2kT\ln\frac{P_{NH_3}}{P^\circ}$
+	\\$kT\ln\frac{P_{N_2}}{P^\circ}+3kT\ln\frac{P_{H_2}}{P^\circ}-2kT\ln\frac{P_{NH_3}}{P^\circ}=$
+	\\$2\mu^\circ_{NH_3}-\mu_{N_2}^\circ-3\mu^\circ_{H_2} $
+	\\Multiple both sides by Avogadro's Number:
+	\\Right side is now $\Delta G^\circ$ of the rxn.
+	\\Then, bring the number coefs on right side 
+	\\into logs as exponents, let $N_Akt=RT$
+	\\\includegraphics[width=0.24\linewidth]{"../../Pictures/Camera Roll/WIN_20171112_14_48_43_Pro"}
+	\\Which simply rearranges to \\$\frac{P^2_{NH_3}(P^\circ)^2}{P_{N_2}P^3_{H_2}}=e^{-\Delta G^\circ/RT}$
+	
+}
+\minibox[frame]{
+\minibox[frame]{\textbf{Nonideal Gas}
+	\\Lennard-Jones Potential: $U(r) \propto \frac{r_0^{12}}{r^{12}}-\frac{r_0^{6}}{r^{6}}$
+	\\$r_0$ is min on graph (steadystate):
+	\\Other model: Van der Waals: 
+	\\$\left(P+\frac{aN^2}{V^2}\right)(V-Nb)=NkT\quad U_\text{tot}=-\frac{aN^2}{V}$
+	\\reduced variables: $\left(p+\frac{3}{v^2}\right)\left(v-\frac{1}{3}\right)=\frac{8}{3}t$
+	\\$p=\frac{P}{P_c} \quad v=\frac{V}{V_c} \quad t=\frac{T}{T_c}$
+	\\$P_c = \frac{1}{27}{a}{b^2} \quad V_c=3Nb \quad kT_c=\frac{8}{27}\frac{a}{b}\quad \frac{NkT_c}{P_cV_c}=\frac{8}{3}$
+	\\VdW isotherm: $p(v,t)=\frac{8t}{3v-1}-\frac{3}{v^2}$
+	\\on VdW iso, draw line enclosing equal areas 
+	\\(maxwell construction) 
+	\\where $p_c$ is, also found with $g(p,t)=\frac{G}{NkT_c}$
+	
+	
+	
+	
+	
+	
+	
+}
+\\\textbf{van't Hoff Derivation}
+\\$K=e^{-\Delta G^\circ/RT}\rightarrow \ln K =\frac{-\Delta G^\circ}{RT}$
+\\Take $\pdv{}{T}$ of both sides (product rule as G is a fn of T)
+\\$\dv{\ln K}{T}=\frac{\Delta G^\circ}{RT^2}-\frac{1}{RT}\pdv{\Delta G^\circ}{T}$
+\\$\pdv{G}{T}=-S\rightarrow\pdv{\Delta G^\circ}{T}=-\Delta S^\circ$
+\\$\dv{\ln K}{T}=\frac{\Delta G^\circ}{RT^2}+\frac{\Delta S^\circ}{RT}$
+\\$\Delta T=0\rightarrow \Delta G^\circ = \Delta H^\circ - T\Delta S^\circ$:
+\\$\dv{\ln K}{T}=\frac{\Delta H^\circ - T\Delta S^\circ}{RT^2}+\frac{\Delta S^\circ}{RT}$
+\\$\dv{\ln K}{T}=\frac{\Delta H^\circ}{RT^2} - \frac{\Delta S^\circ}{RT}+\frac{\Delta S^\circ}{RT}$
+\\$\dv{\ln K}{T}=\frac{\Delta H^\circ_\text{rxn}}{RT^2}$
+\\\textbf{Partial Pressure EQ example}
+\\From mass action law (minibox to left): 
+\\$P^2_{NH_3}=KP_{N_2}P^3_{H_2}$ (total P =200 atm)
+\\Due to stoich, and b/c theyre all in same container:
+\\$3P_{N_2}=P_{H_2}\rightarrow P^2_{NH_3}=27KP^4_{N_2}$
+\\$200=P_{N_2}+P_{H_2}+P_{NH_3}=P_{N_2}+3P_{N_2}+P_{NH_3}$
+\\$200=4P_{N_2}+P_{NH_3}=4P_{N_2}+\sqrt{27K}P^2_{H_2}$
+\\Solve quadratically to find $P_{N_2}$,
+\\Then plug into $P^2_{NH_3}=27KP^4_{N_2}$ to get $P_{NH_3}$
+}
+\\\minibox[frame]{\textbf{Quasistatic}: slow enough $\Delta V$ s.t. gas stays in equil. \\ \textbf{Isothermal Comp.:} so slow that $\Delta T = 0$, PV is constant. $\| $ \textbf{Quasistatic Isothermal Compression:} $Q=-W$ $\|$ \textbf{Adiabatic Comp:} so fast that $Q=0$.
+	\\	\textbf{0th Law}: After 2 systems in thermal contact for long enough, thermal equil (same T). 1st, 2nd laws on other side.  \textbf{3rd law:} the entropy at absolute zero of a perfect crystal is zero.\\ \textbf{Equilibria types} (eqns on other side:)diffu: molcles free to move around with no tendency to go one way over another. mechanical: large scale motions can take place, but no long do. \\ \textbf{Enthalpy}: E required to create system out of nothing (U) AND put i
+	t into the environment (PV $\equiv$ W). $W_{other}$ is work that doesn't involve $\Delta V$. \\ \textbf{Pressure} is NOT really directional; more like a scalar quantity (like in the atmosphere).\\ \textbf{Degrees of freedom}: monatomic has 3 (trans.), diatomic+ has 5 (trans, rot.), and these both gain 2 (vibr) at high temps (although usually not the case unless mentioned)
+	\\ \textbf{Heat} is the spontaneous flow of energy from a hot object to a cold one. \textbf{Magnetization}: total magnetic moment of whole paramagnet. \textbf{Temperature}: Willingness to give up energy.
+	\\ \textbf{Derivatives:} $\sinh(x)\rightarrow\cosh(x),\cosh(x)\rightarrow\sinh(x),\tanh(x)\rightarrow sech^2(x)=1/\cosh^2(x)$ \textbf{Approximating lns:} $\ln(1+x)\approx x$ if $|x| \ll 1$ \textbf{Peak Width of Mon. IG:} $1/\sqrt{N}$\\ \textbf{More approximations:} $\Omega \simeq\left(\frac{qe}{N}\right)^N$ if $q \gg N$ (High T). $\Omega \simeq\left(\frac{Ne}{q}\right)^q$ if $N \gg q$ , $U=N\epsilon e^{-\epsilon/kT}$(low T).
+	\textbf{Isentropic Process:} Quasistatic Adiabatic, $\Delta S = 0$
+	\\Latent Heat: a type of $\Delta H$ $\|$ Einstein Solid: $U_\text{tot}=q\hbar \omega=q\epsilon$ \textbf{ENTROPY IS ADDITIVE} $\|$ Free expansion of mon IG: $\Delta S Nk\ln (V_f/V_i)$
+	\\Entropy of Mixing Mon IG: disti: $\Delta S =2Nk\ln 2$, indist: $\Delta S =0$
+	\\Reversible processes must be quasistatic. \textbf{Diffusive Eq} same as Chem Eq
+	
+	
+	
+}
+\\\minibox[frame]{
+	\textbf{Dilute Solutions Basics}
+	\\For pure solvent A: $G = N_A\mu_0(T,P)$
+	\\$G_\text{solution}=N_A\mu_0(T,P)+N_Bf(T,P)-N_BkT\ln N_A+N_BkT\ln N_B -N_B kT$
+	\\for more than 1 solute, repeat all terms in this except first, now with $N_C, N_D$, etc.
+	\\$\mu_A = \left(\pdv{G}{N_A}\right)_{T,P,N_B}=\mu_0(T,P)-\frac{N_BkT}{N_A}$
+	\\$\mu_B = \left(\pdv{G}{N_B}\right)_{T,P,N_A}=f(T,P)+kT\ln (N_B/N_A)=\mu^\circ(T,P)+kT\ln m_B$
+	\\where $\mu^\circ$ is at standard condition of $m=1$.
+	\\\textbf{molality} $m=\frac{\text{mol solute B (small one)}}{\text{kg solvent A}}$
+	\\
+	\\\minibox[frame]{\textbf{Osmotic Pressure}
+		\\$\mu_0(T,P_1)=\mu_0(T,P_2)-\frac{N_BkT}{N_A}$
+		\\$P_1$ is pressue on side of pure solvent
+		\\$P_2$ is pressure on side of soln
+		\\$(P_2-P_1)=\frac{N_BkT}{V}=\frac{n_BRT}{V}$
+		\\Poiseuille's Law: $\frac{P(x+L)-P(x)}{L}=\frac{8\eta}{\pi r^4} \times \text{flow rate}$
+		\\\textbf{Boiling \& Freezing Points}
+		\\BP: $\mu_{A,l}=\mu_{A,g}$ FP: $\mu_{A,l}=\mu_{A,s}$
+		\\$\mu_{0,l}(T,P)-\frac{N_BkT}{N_A}=\mu_{A,g}(T,P)$
+		\\Boiling pt Elevation: $T-T_0=\frac{N_BkT^2_0}{L_\text{vap}}$
+		\\Freezing pt Depression: $T-T_0=-\frac{N_BkT^2_0}{L_\text{melting}}$
+		\\$(T\approx T_0)$
+		\\Vapor P: Raoult's Law: $\frac{P}{P_0}=1-\frac{N_B}{N_A}$
+		
+		
+		
+		
+		
+	}
+	\minibox[]{
+	\\
+	
+
+
+
+
+}
+\minibox[frame]{\textbf{Chemical Equilibrium}
+	\\In Equil: $\sum\mu_\text{products}=\sum\mu_\text{reactants}$
+	\\$K=\exp (-\Delta G^\circ/RT)$
+	\\for $2A+3B\leftrightarrow4C$:
+	\\$K=\frac{P_C^4}{P_A^2P_B^3}$
+	\\van't Hoff: $\dv{\ln K}{T}=\frac{\Delta H^\circ_\text{rxn}}{RT^2}$
+	\\$\rightarrow \ln K(T_2)-\ln K(T_1)=\frac{\Delta H^\circ_\text{rxn}}{R}\left(\frac{1}{T_1}-\frac{1}{T_2}\right)$
+	\\pH = $-\log_{10}m_{H^+} \qquad m\equiv\frac{\text{mol solute}}{\text{kg solvent}}$
+	\\Gas dissolved in water: $\mu_g=\mu_\text{solute}$
+	\\\textbf{Liquid and Gas reactions:}
+	\\$\mu^\circ_\text{gas}+kT\ln (P/P^\circ) = \mu^\circ_\text{solute}+kT\ln m$
+	\\Henry's Law: $\frac{m}{P/P^\circ}=\exp \left(-\frac{\Delta G^\circ}{RT}\right)$
+
+
+}
+\minibox[]{\includegraphics[width=0.25\linewidth]{"../../Pictures/Screenshots/otto cycle"}}
+\minibox[frame]{
+	\minibox[frame]{\textbf{Blackbody Radiation}: 
+		\\EM rad (harm oscil) in a ``box''
+		\\1 oscil: $Z=1/(1-e^{-\beta hf})$
+		\\$\overline{E}=hf/(e^{hf/kT}-1)$
+		\\$\overline{n}_\text{Pl}=1/(e^{hf/kT}-1)$ (for $\gamma$)
+		\\This is $\overline{n}_\text{BE}$ as $\mu=0$ for $\gamma$
+		\\$u(x)\propto x^3/(e^x-1)$, $x=\epsilon/kT$
+		\\in box, $\frac{U}{V}=\frac{8\pi^5(kT)^4}{15(hc)^3}$
+		\\$C_V=4aT^3$, $a=8\pi^5k^4V/15(hc)^3$
+		\\$S=\frac{32\pi^5}{45}V(\frac{kT}{hc})^3k$
+		\\Total E escaping from hole in $\diff t$:
+		\\$=\frac{A}{4}\frac{U}{V}c\diff t$, hole area $A$
+		\\Power$=\sigma eAT^4$, $\sigma=5.67\times10^{-8}$
+		\\$Pressure=(1/3)\sigma T^4$, \\$\diff U=4\sigma V T^3\diff T + \sigma T^4 \diff V$
+		\\$U=\sigma VT^4$
+		\\\textbf{Debye Solids:}
+
+		
+		
+
+
+
+}
+		\minibox[frame]{
+			Einstein: $C_V=3Nk\frac{(\epsilon/kT)^2e^{\epsilon/kT}}{(e^{\epsilon/kT}-1)^2}$
+			\\Sound: $c_s=\sqrt{\tau/\rho}$, $\epsilon=hf=h\frac{c_s}{\lambda}$
+			\\$n\frac{\lambda}{2}=L\Rightarrow\lambda_n=\frac{2L}{n}\Rightarrow f_n=\frac{c_s}{2L}n$
+			\\$\epsilon_n=h\frac{c_s}{2L}\sqrt{n_x^2+n_y^2+n_z^2}$
+			\\3D sys, N partic: $n_{max}=(\frac{6N}{\pi})^{1/3}$
+			\\$n_\text{max}$ is highest number of antinodes
+			\\$U=\frac{9NkT^4}{T_D^3}\int_0^{T_D/T}\frac{x^3\diff x}{e^x-1}$
+			\\$U=\frac{3\pi^4}{5}\frac{NkT^4}{T_D^3}$ when $T\ll T_D$
+			\\$x=hc_sn/2LkT$; $T_D=hc_sn_\text{max}/2Lk$
+			\\$T_D=\frac{hc_s}{2k}(\frac{6N}{\pi V})^{1/3}$
+			\\$T\gg T_D$: $C_V=3Nk$
+			\\$T\ll T_D$: $C_V=\frac{12\pi^4}{5}(\frac{T}{T_D})^3Nk$
+			\\Metals at low temp: $T\ll T_D$:
+			\\$\frac{C_V}{T}=\gamma + \frac{12\pi^4Nk}{5T_D^3}T^2$
+			\\$C_V=(\partial U/\partial T)_{(V)}$
+	
+
+
+
+}
+\minibox[frame]{}
+\minibox[frame]{}
+\\\minibox[frame]{
+	\textbf{(1)}$I.G.:\, PV=nRT=NkT, \overline{K}_{trans}=\frac{3}{2}kT , v_{rms}=\sqrt{\frac{3kT}{m}} , U_{therm}=\frac{f}{2}NkT=\frac{f}{2}PV \,|\ $   $\Delta U = Q+W \,|\ W_{quasistatic}=-P\Delta V=-\int_{V_i}^{V_f}P(V)dV \,|\  W_{isothermal}=NkT\ln \frac{V_i}{V_f}=-Q$ 
+	\\$\Delta T = 0, PV=$const$ \,|\ Q_{isothermal\, (out)}=NkT\ln\frac{V_f}{V_i} \,|\ (adiabatic)\,V_i^{\gamma}P_i = V_f^{\gamma}P_f, V_iT_i^{f/2}=V_fT_f^{f/2}, Q=0, \gamma = \frac{f+2}{f} \,|\ C_V= \left (\frac{\partial U}{\partial T}\right)_V \,|\ C_P = \left (\frac{\partial U}{\partial T}\right)_P =P \left (\frac{\partial V}{\partial T}\right)_P \,|\ $  
+	\\$C_V=\frac{Nfk}{2}, C_P = C_V + Nk \, (I.G. \, only) \,|\  H=U+PV, \Delta H = Q+W_{other} \,|\ C_P=\left (\frac{\partial H}{\partial T}\right)_P \,|\ Q=m\Delta T C \,|\ No.\, micro\, for \,1 \,system\, of\, N\, 2-states:\, 2^N$ 
+	\\
+	\textbf{(2)} $ \Omega(N\, coins, n \, heads)=\frac{N!}{n!(N-n)!} = \binom{N}{n} \,|\ P(n\, heads) = \frac{\Omega (n)}{\Omega (all)} \,|\  \Omega_{1\, system}(N\, oscillators, q \, energy \, units) = \binom{q+N-1}{q} = \frac{(q+N-1)!}{q!(N-1)!} \,|\  Two\, systems:\, total \, micro = \Omega(N_{tot},q_{tot}) \,|\ $
+	\\ $specific \, microstate:\, \Omega = \Omega_A(N_A,q_A)\Omega_B(N_B,q_B) \,|\ Stirling: \, N! \approx N^Ne^{-N}\sqrt{2\pi N} \,|\  \Delta x \Delta p_x \approx h \,|\ S=k\ln\Omega  \,|\ mon. \, I.G.: \Omega(U,V,N) \approx \frac{1}{N!}\frac{V^N}{h^{3N}}\frac{\pi^{3N/2}}{(3N/2)!}(\sqrt{2mU})^{3N} = f(N)V^NU^{3N/2}, $
+	\\$S = Nk \left[\ln \left(\frac{V}{N}\left(\frac{4\pi mU}{3Nh^2} \right)^{3/2}\right)+\frac{5}{2} \right] \,|\ Mon. \, I.G.: (\Delta S)_{U,N}=Nk \ln \frac{V_f}{V_i}, Q = -W $(quasist. isother. comp.)$ \,|\ free \, exp: \Delta U = Q + W = 0+0=0 \,|\ \Delta S=\frac{Q}{T}$  $(if \Delta T=0,$ works for quasistatic)$\,|\  mixing\, A \& B: \Delta S_{total}= \Delta S_A + \Delta S_B=2Nk\ln 2 \,|\ $\\ SECOND\, LAW:$ dS \geq 0 \,|\ Eins. \, solid\, w/ q \gg N: (U)_{N,V}= NkT \,|\ \Omega(N,q) \approx \left(\frac{q+N}{q}\right)^q \left(\frac{q+N}{N}\right)^N \,|\ $  No. of macrstats for 2 eins. sols w shared q: q+1.  
+	\\\textbf{(3)} $\,|\ 2\, eins. \, solids\, at\, equil: \frac{\partial S_A}{\partial U_A}=\frac{\partial S_B}{\partial U_B}(fixed\, N,V) \rightarrow T_A=T_B \,|\ \frac{1}{T} \equiv \left (\frac{\partial S}{\partial U}\right)_{N,V}= \frac{\partial N_{\uparrow}}{\partial U}\frac{\partial S}{\partial N_{\uparrow}}\,|\ C_V \equiv \left(\frac{\partial U}{\partial T}\right)_{N,V} \,|\  E.S.: \, C_{V}= Nk \,|\ Mon. \, I.G.: \, C_V=\frac{3}{2}Nk \,|\ $
+	\\$(dS)_{\Delta V, W=0} = \frac{dU}{T}=\frac{Q}{T} 
+	\,|\  \Delta S = \int_{T_i}^{T_f}\frac{C_V}{T}dT \,| PARAMAGNETISM:\, (\mu =magnetic\, moment\, constant): \,U =\mu B(N-2N_{\uparrow})=-N\mu B\tanh (\frac{\mu B}{kT}) \,|\  U_{dipole}\, for\, \uparrow/\downarrow= -/+ \mu B \,|\ $
+	\\$M = \mu (N_{\uparrow}-N_{\downarrow})=-\frac{U}{B}=N\mu \tanh (\frac{\mu B}{kT}) \,|\  \Omega(N_{\uparrow})=\binom{N}{N_{\uparrow}}=\frac{N!}{N_{\uparrow}!N_{\downarrow}!} \,|\ \frac{S}{k} = N \ln N - N_{\uparrow}\ln N_{\uparrow} -(N-N_{\uparrow})\ln (N-N_{\uparrow}) \,|\ \sinh(x) =\frac{1}{2}(e^x-e^{-x})  \,|\ \cosh(x) =\frac{1}{2}(e^x+e^{-x}) \,|\ $
+	\\$\tanh(x)=\frac{\sinh(x)}{\cosh(x)} \,|\ C_B = \left(\frac{\partial U}{\partial T}\right)_{N,B}=Nk\frac{(\mu B/kT)^2}{\cosh^2(\mu B/kT)}\,|\ Curie's \, Law: \, M \approx \frac{N\mu^2B}{kT}\, when\, \mu B \ll kT \,|\ \mu_B = 9.274 \times 10^{-24} J/T mech. \, equil:\, \frac{\partial S_A}{\partial V_A}=\frac{\partial S_B}{\partial V_B} (fixed\, U,N)\rightarrow V_A=V_B \,|\ $
+	\\$P=T\left(\frac{\partial S}{\partial V}\right)_{U,N} \,|\ (\Delta S)_P = \int_{T_i}^{T_f}\frac{C_P}{T}dT \,|\ diffusive\, equil: \,\frac{\partial S_A}{\partial N_A}= \frac{\partial S_B}{\partial N_B} (fixed\, U,V) \rightarrow \mu_A=\mu_B \,|\ \mu \equiv -T\left(\frac{\partial S}{\partial N}\right)_{U,V} \,|\ $
+	\\heat lost/gained for objects A and B;A is has higher $T_i$than B: $ m_AC_A(T_{A}-T_f)=m_BC_B(T_f-T_B) \,|\ $ diatomic gas: $ C_p=\frac{7}{2}nR \,\|\,$ mech. equil: $P_A=P_B$
+	
+	
+	
+}
+\minibox[frame]{\textbf{Boltzmann Statistics}
+	\\can exchange heat with reservoir
+	\\$\frac{\mathcal{P}(s_2)}{\mathcal{P}(s_1)}=\frac{e^{-E(s_2)/kT}}{e^{-E(s_1)/kT}}$ (Boltzmann factors)
+	\\$\mathcal{P}(s)=\frac{1}{Z}e^{-E(s)/kT}\quad Z=\sum_se^{-E(s)/kT}$
+	\\For any $X(s)$ (like $E$,) ($\beta=1/kT$)
+	\\ $\overline{X}=\sum_sX(s)\mathcal{P}(s)=\frac{1}{Z}\sum_sX(s)e^{-E(s)/kT}$
+	\\$U=N\overline{E}$, $\overline{E}=-\frac{1}{Z}\pdv{Z}{\beta}$, $\overline{E^2}=\frac{1}{Z}\pdv[2]{Z}{\beta}$
+	\\Harmonic Oscill: $\overline{E}=\frac{\hbar\omega}{e^{\hbar\omega/kT}-1}$
+	\\Rotat Diat Molec: $E(j)=j(j+1)\epsilon$, j=0,1,2...
+	\\$Z_\text{rot}=\sum_{j=0}^\infty(2j+1)e^{-j(j+1)\epsilon/kT}$
+	\\High T: $Z_{rot}\approx\int_0^\infty(2j+1)e^{-E(j)\beta}\diff j = \frac{kT}{\epsilon}$
+	\\2-state Paramag, 1 dipole: $E=\pm\mu B$
+	\\$Z=2/cosh(\beta\mu B)\quad\overline{E}=-\mu B\tanh(\beta\mu B)$
+	\\Equipartition: $\overline{E}=\frac{1}{2}kT$
+	\\\textbf{Use partials of $F$ to find $S$, $\mu$.}
+}
+\minibox[frame]{\textbf{More Boltzmann Statistics}
+	\\\textbf{Maxwell Speed Dist:} $v_\text{rms}=\sqrt{\frac{3kT}{m}}$
+	\\$\mathcal{D}(v)=\left(\frac{m}{2\pi kT}\right)^{3/2}4\pi v^2 e^{-mv^2/2kT}$
+	\\$\overline{v}=\sqrt{\frac{8kT}{\pi m}}$
+	\\\textbf{IG revisit:} $Z=\frac{1}{N!}Z_1^N$ (N indist molec)
+	\\$Z_1=Z_\text{tr}Z_\text{int}$, 1D: $Z_1=\frac{L}{\ell_Q}$ (box $L$)
+	\\$\ell_Q=\frac{h}{\sqrt{2\pi m k T}}$, 3D: $Z_\text{tr}=\frac{V}{v_Q}$, $v_Q=\ell_Q^3$
+	\\3D: $Z_1=\frac{V}{v_Q}Z_\text{int}$, \\N molec: $Z=\frac{1}{N!}\left(\frac{VZ_\text{int}}{v_Q}\right)^N$
+	\\$\ln Z=N[\ln (\frac{V}{Nv_Q})+1+\ln Z_\text{int}]$
+	\\Free Energy: $F=-kT\ln Z$, $Z=e^{-F/kT}$
+	\\$S=-k\overline{\ln\mathcal{P}(s)}$
+	\\N Non-int high T, low $\rho$ partics: $Z\approx\frac{(Z_1)^N}{N!}$
+	
+	
+}
+\minibox[frame]{\textbf{Quantum Statistics}(Gibbs factors)
+	\\Can exchange E \& N w/ reservoir
+	\\$\frac{\mathcal{P}(s_2)}{\mathcal{P}(s_1)}=\frac{e^{-[E(s_2)-\mu N(s_2)]/kT}}{e^{-[E(s_1)-\mu N(s_1)]/kT}}$ 
+	\\$\mathcal{P}(s)=\frac{1}{\mathcal{Z}}e^{-[E(s)-\mu N(s)]/kT}$
+	\\$\mathcal{Z}=\sum_se^{-[E(s)-\mu N(s)]/kT}$
+	\\If $>1$ types of partic in sys, sum $\mu N$
+	\\Langmuir Adorption: frac of sites occ (IG):
+	\\$\mu=(\pdv{F}{N})_{T,V}=-kT\ln(\frac{kTZ_\text{int}}{Pv_Q})$
+	\\frac occ: $f=\frac{P}{P_0+P}, P_0=kTZ_\text{int}e^{\epsilon/kT}/v_Q$
+	\\fermions: $\mathcal{Z}=1+e^{-(\epsilon-\mu)/kT}$
+	\\\textbf{avg no. of ferms in certain state:} \\$\overline{n}_\text{FD}=\frac{1}{e^{(\epsilon-\mu)/kT}+1}$
+	\\Bosons: $\overline{n}_\text{BE}=\frac{1}{e^{(\epsilon-\mu)/kT}-1}$
+	\\$\overline{n}_\text{Boltzmann}=e^{-(\epsilon-\mu)/kT}$
+	\\$U=\sum_s \epsilon\overline{n}(s)$
+	
+}
+\minibox[frame]{\textbf{Degen Fermi Gas}
+\\Low T, so $V/N \ll v_Q$ and $kT\ll \epsilon_F$
+\\At $T\simeq0$: Fermi E $\epsilon_F\equiv\mu(T=0)$
+\\nearly all states above $\epsilon_F$ unoccupied
+\\$\epsilon_F=\frac{h^2}{8m}(\frac{3N}{\pi V})^{2/3}$ (highest E of partics)
+\\$U_\text{tot}=(3/5)N\epsilon_F$, $P=\frac{2}{3}\frac{U}{V}$
+\\Bulk Mod. $B=-V(\pdv{P}{V})_{(T)}=\frac{10}{9}\frac{U}{V}$ ($T>0$)
+\\(change in pressure when compressed)
+\\$C_V=(\pi^2Nk^2T)/(2\epsilon_F)$, $P=\frac{2U}{3V}$ ($T>0$)
+\\\textbf{DFG Density of States}
+\\No. of single-partic states per unit E
+\\$g(\epsilon)=\frac{\pi(8m)^{3/2}}{2h^3}V\sqrt{\epsilon}=\sqrt{\epsilon}(3N)/(2\epsilon_F^{3/2})$
+\\integr. b/w $\epsilon_1$ and $\epsilon_2$ for no. of states b/w
+\\For system: $N=\int_0^\infty g(\epsilon)\overline{n}_\text{FD}(\epsilon)\diff\epsilon$
+\\$U=\int_0^\infty \epsilon g(\epsilon)\overline{n}_\text{FD}(\epsilon)\diff\epsilon$
+\\for spin-1/2 particles:
+\\3D: $g(\epsilon)=g_0\sqrt{\epsilon}, g_0=\frac{\pi}{2}V(\frac{2m}{\hbar^2\pi^2})^{3/2}$
+\\2D: $g(\epsilon)\propto$ constant; 1D: $g(\epsilon)\propto \epsilon^{-1/2}$
+\\3D at $T>0$:
+\\$N=\frac{2}{3}g_0\mu^{3/2}+\frac{1}{4}g_0\frac{(kT)^2}{\mu^{1/2}}\frac{\pi^2}{3}+\cdots$
+\\$U=\frac{3}{5}N\epsilon_F+\frac{\pi^2}{4}N\frac{(kT)^2}{\epsilon_F}+\cdots$
+
+
+}
+\end{document}
