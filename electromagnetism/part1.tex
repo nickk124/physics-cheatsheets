@@ -1,0 +1,202 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{float}
+\usepackage{physics}
+\usepackage{minibox}
+%\usepackage{background}
+\usepackage{bbold}
+
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand{\normal}{\hat{\mathbf{n}}}
+\newcommand{\epn}{\epsilon_0}
+\newcommand{\K}{\frac{1}{4\pi\epn}}
+\newcommand{\rhat}{\mathbf{\hat{r}}}
+\newcommand{\mf}{\fontsize{14}{14}\selectfont}
+\def\du#1{\underline{\underline{#1}}}
+
+%\SetBgScale{1}
+%\SetBgAngle{90}
+%\SetBgColor{black}
+%\SetBgContents{\rule{.4pt}{\paperwidth}}
+%\SetBgHshift{-1.83333333333333333333333in}
+
+\def\rcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics[trim= 1em 0 14em 0,clip]{ScriptR}}$}}}
+\def\brcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics[trim= 1em 0 14em 0,clip]{BoldR}}$}}}
+
+\begin{document}
+	\fontsize{16pt}{16pt}\selectfont
+\minibox[frame]{
+	% midterm 1
+\minibox[frame,t]{
+	
+	$\mathbf{F}=\frac{1}{4\pi\epsilon_0}\frac{Qq}{\rcurs^2}\hat{\brcurs}=q\mathbf{E}$
+	\\$\mathbf{E}(\mathbf{r})=\frac{1}{4\pi\epsilon_0}\int\diff\tau '\rho(\mathbf{r}')\frac{\hat{\brcurs}}{\rcurs^2}$
+	\\$\oint_\sigma\diff\mathbf{a}\cdot\mathbf{E}=Q_{enc}/\epsilon_0$
+	\\$\nabla\cdot\mathbf{E}=\rho(\mathbf{r})/\epsilon_0 \quad \nabla\cross \mathbf{E} = 0$
+	\\$V(\mathbf{r}) = - \int_{\infty/ref}^\mathbf{r}\diff\hat{\mathbf{\ell}}\cdot\mathbf{E}$
+	\\$\Delta V = \int_a^b \diff\hat{\mathbf{\ell}}\cdot\mathbf{E} \quad \mathbf{E} = -\nabla V$
+	\\$V(\mathbf{r})=\frac{1}{4\pi\epsilon_0}\int\diff\tau '\frac{\rho(\mathbf{r}')}{\rcurs}$
+	\\$\mathbf{E}_\perp^{above}-\mathbf{E}_\perp^{below} = \sigma\normal/\epsilon_0$
+	\\$\pdv{V^{above}}{\normal}-\pdv{V^{below}}{\normal}=-\sigma/\epn$
+	\\$\nabla\cdot\frac{\hat{\brcurs}}{\rcurs^2}=4\pi\delta(\hat{\brcurs}) \quad \epsilon_{123} = 0$
+	\\$c = \sqrt{a^2 + b^2 -2ab\cos\theta}$
+	\\$=$%\abs{a+b} - \abs{a-b}$
+	\\$\nabla\cross(r^n\hat{\mathbf{r}})=0$
+	
+
+}
+\minibox[frame,t]{
+	$\nabla^2V=-\frac{1}{\epn}\rho$
+	\\$V_{grounded}=0$
+	\\$A_n=\frac{2}{a}\int_0^af(x)\cos(n\pi x/a)\diff x$
+	\\$B_n=\frac{2}{a}\int_0^af(x)\sin(n\pi x/a)\diff x$
+	\\$\cosh(x) = (e^x+e^{-x}) / 2$
+	\\$\sinh(x) = (e^x-e^{-x}) / 2$
+	\\$P_0(x) = 1 \quad P_1(x) = x$
+	\\$P_2(x) = \frac{1}{2}(3x^2 - 1)$
+	\\$P_3(x) = \frac{1}{2}(5x^3-3x)$
+	\\$V_{spher}(r,\vartheta)=$
+	\\$=\sum_{l=0}^\infty\left(A_lr^l+\frac{B_l}{r^{l+1}}\right)P_l(\cos\vartheta)$
+	\\$V_{cyl}(f,\varphi) = G\ln r + H+ $
+	\\$\sum_{k=1}^\infty\left[(C_kr^k+D_kr^{-k})\times\right.$
+	\\$\left.(A_k\cos k\varphi + B_k\sin k\varphi)\right]$
+}
+\minibox[frame,t]{
+	
+	$W=\frac{1}{2}\sum_iq_iV_i\equiv\frac{1}{2}\int\rho V\diff \tau$
+	\\$W = \frac{1}{2}\int_{\mathcal{V}}\diff\tau\rho(\mathbf{r})V(\mathbf{r})$
+	\\$W=\frac{\epn}{2}\left(\int_{\mathcal{V}}E^2\diff\tau+\right.$
+	\\$\left.\oint_\sigma V\mathbf{E}\cdot\diff\mathbf{a}\right)$
+	\\$W = \frac{\epn}{2}\int_\text{all space} E^2 \diff\tau$
+	\\$V_{cap}\equiv V_+-V_-$
+	\\$C\equiv Q/V_{cap}$
+	\\$E_{plane} = \sigma/2\epn$
+	\\$V_{plates} = Qd/A\epn$
+	\\$W_{cap}=QV_{cap}=Q^2/2C$
+	\\$\mathbf{A}\cross\mathbf{B}=\sum_{i,j,k}\epsilon_{ijk}\hat{e}_iA_jB_k$
+	\\$\nabla\cdot(\nabla f\cross \nabla g) = 0$
+	\\$\delta(kx-x')\propto\delta(x-x'/k)$
+}
+}
+\\
+\minibox[frame]{
+	% midterm 2
+	\minibox[frame,t]{
+		\fontsize{14}{14}\selectfont
+		$V_{mp}(\mathbf{r}) = \K \int\diff \tau^\prime \frac{\rho(\mathbf{r}^\prime)}{\abs{\mathbf{r} - \mathbf{r}^\prime}}\quad\nabla^\prime(1/\rcurs)=\hat{\brcurs}/\rcurs^2$
+		\\\fontsize{14}{14}\selectfont$\frac{1}{\abs{\mathbf{r} - \mathbf{r}^\prime}}\simeq \frac{1}{r} + (-\mathbf{r}^\prime)\cdot\nabla\frac{1}{r} + \frac{1}{2}(-\mathbf{r}^\prime\cdot\nabla)^2\frac{1}{r}+\cdots$
+		\\\fontsize{14}{14}\selectfont$V_{mp}(\mathbf{r}) = \K\left[\frac{q}{r}+\frac{\mathbf{\hat{r}}\cdot\mathbf{p}}{r^2} + \frac{1}{2r^3}\mathbf{\hat{r}}\cdot\du{\mathbf{Q}}
+		\cdot\rhat+\cdots\right]$
+		\\\fontsize{14}{14}\selectfont$\du{\mathbf{Q}}=\int\diff\tau^\prime\rho(\mathbf{r}^\prime)[-(\mathbf{r}^\prime)^2\mathbb{1} + 3\mathbf{r}^\prime\mathbf{r}^\prime]$
+		\\\fontsize{14}{14}\selectfont$\frac{1}{\abs{\mathbf{r} - \mathbf{r}^\prime}}=\sum_{\ell = 0}^\infty\frac{(r^\prime)^\ell}{r^{\ell+1}}P_\ell(\cos\alpha)\qquad \cos\alpha = \rhat\cdot\rhat^\prime$
+		\\\fontsize{14}{14}\selectfont$V_{mp}(\mathbf{r}) = \K\sum\limits_{\ell = 0}^\infty\frac{1}{r^{\ell+1}}\int\diff\tau^\prime\rho(\mathbf{r}^\prime)(\mathbf{r}^\prime)^\ell P_\ell(\cos\alpha)$
+		\\\fontsize{14}{14}\selectfont$V_{dp}=\K\frac{1}{r^2}\rhat\cdot\mathbf{p}\quad\mathbf{E}_{dp} = -\K\frac{1}{r^3}[\mathbf{p} - 3\rhat\rhat\cdot\mathbf{p}]$
+		%\\\fontsize{14}{14}\selectfont$\mathbf{E}_{dp} = -\K\frac{1}{r^3}[\mathbf{p} - 3\rhat\rhat\cdot\mathbf{p}]$
+		\\\fontsize{14}{14}\selectfont$\mathbf{p} = \int\diff\tau^\prime\rho(\mathbf{r}^\prime)\mathbf{r}^\prime = \sum_{i}q_i\mathbf{r}_i\qquad \mathbf{p}_{phys} = q\mathbf{d}$
+		%\\\fontsize{14}{14}\selectfont$\nabla^\prime(1/\rcurs)=\hat{\brcurs}/\rcurs^2$
+		\\\fontsize{14}{14}\selectfont$(\mathbf{a}\cdot\nabla)\mathbf{f} =\mathbf{a}\cdot\nabla\mathbf{f} \quad\nabla\mathbf{r} = \mathbb{1}=\nabla\hat{\mathbf{r}}$
+		%\\\fontsize{14}{14}\selectfont$\nabla\mathbf{r} = \mathbb{1}=\nabla\hat{\mathbf{r}}$
+		\\\fontsize{14}{14}\selectfont$\nabla\nabla\frac{1}{r} = \frac{1}{r^3}(-\mathbb{1} + 3\mathbf{\hat{r}}\mathbf{\hat{r}})\quad\nabla(r^n)=nr^{n-1}\hat{\mathbf{r}}$
+		\\\fontsize{14}{14}\selectfont$\nabla(\mathbf{a}\cdot\mathbf{b}) = (\nabla\mathbf{a})\cdot\mathbf{b}+(\nabla\mathbf{b})\cdot\mathbf{a}$
+		%\\\fontsize{14}{14}\selectfont$\nabla(r^n)=nr^{n-1}\hat{\mathbf{r}}$
+		\\\fontsize{14}{14}\selectfont$\mathbf{p}=\alpha\mathbf{E}\qquad \mathbf{N}_{dp} = \mathbf{p}\cross\mathbf{E}$
+		\\\fontsize{14}{14}\selectfont$\mathbf{F}_{dp} = q(\Delta\mathbf{E})\simeq(\mathbf{p}\cdot\nabla)\mathbf{E}$
+	}
+	\minibox[frame,t]{
+		\fontsize{14}{14}\selectfont$W_{dp} = -\mathbf{p}\cdot\mathbf{E}\quad D_{ab}^\perp-D_{bel}^\perp=\sigma_f $
+		\\\fontsize{14}{14}\selectfont$V_{de}(\mathbf{r})=\K\int_{\mathcal{V}}\frac{\mathbf{P}(\mathbf{r}^\prime)\cdot\hat{\brcurs}}{\rcurs^2}\diff\tau^\prime$
+		\\\fontsize{14}{14}\selectfont$V_{de}(\mathbf{r})=\K\left[\oint_{\mathcal{S}}\frac{\sigma_b}{\rcurs}\diff a^\prime+ \int_{\mathcal{V}}\frac{\rho_b}{\rcurs}\diff\tau^\prime\right]$
+		\\\fontsize{14}{14}\selectfont$\sigma_b=\mathbf{P}\cdot\hat{\mathbf{n}}\qquad\rho_b=-\nabla\cdot\mathbf{P}$
+		\\\fontsize{14}{14}\selectfont$\nabla\cdot\mathbf{D}=\rho_f\quad\mathbf{D}\equiv\epsilon_0\mathbf{E}_{tot}+\mathbf{P}$
+		\\\fontsize{14}{14}\selectfont$\oint\diff\mathbf{a}\cdot\mathbf{D}=Q_{f,enc} \quad \mathbf{P}=\epn\chi_e\mathbf{E}_{tot}$
+		\\\fontsize{14}{14}\selectfont$\mathbf{D}=\epn(1+\chi_e)\mathbf{E}_{tot}$
+		\\\fontsize{14}{14}\selectfont$\rho_b=-\frac{\chi_e}{1+\chi_e}\rho_f \quad \mathbf{E}_{\text{sph,unif}}=-\frac{1}{3\epn}\mathbf{P}$
+		\\\fontsize{14}{14}\selectfont$\mathbf{D}=\epn\mathbf{E}_{vac} \quad \mathbf{E}=\mathbf{E}_{vac}/\kappa$
+		%\\\fontsize{14}{14}\selectfont$D_{ab}^\perp-D_{bel}^\perp=\sigma_f $
+		\\\mf$\epsilon_{ab}\pdv{V_{ab}}{n} - \epsilon_{bel}\pdv{V_{bel}}{n} = -\sigma_f$
+		%\\\fontsize{14}{14}\selectfont$\epsilon_{ab}E_{ab}^\perp-\epsilon_{bel}E_{bel}^\perp=\sigma_f$
+		\\$\pdv{\mathbf{E}}{t}+\frac{\mathbf{J}}{\epn}-\frac{\nabla\cross\mathbf{B}}{\epn\mu_0}=0$
+		\\$\mathbf{B}(\mathbf{r})=\frac{\mu_0}{4\pi}\int\diff\tau^\prime\frac{\mathbf{J}(\mathbf{r})\cross\hat{\brcurs}}{\rcurs^2}$
+		\\$\mathbf{B}(\mathbf{r})=\frac{\mu_0}{4\pi}\nabla\cross\int\diff\tau^\prime\frac{\mathbf{J}(\mathbf{r}^\prime)}{\rcurs}$
+		
+	
+
+	}
+	\minibox[frame,t]{
+		\mf$\kappa\equiv 1+\chi_e \equiv\epsilon_r$
+		%\\\mf$\epsilon\equiv \epn(1+\chi_e)$
+		\\\mf$C=\kappa Q/V_{vac}$
+		%\\\mf$W=\kappa Q/V_{vac}$
+		%\\\mf$V=V_{vac}/\kappa$
+		\\\mf$W_C=\kappa CV^2/2$
+		\\\mf$W = \frac{1}{2}\int\diff\tau\mathbf{D}\cdot\mathbf{E}$
+		\\\mf$\mathbf{v}\cross\mathbf{E}=\mathbf{B}/\epn\mu_0$
+		\\\mf$\nabla\cdot\mathbf{J}_{ms}=\mathbf{0}$
+		\\\mf$\nabla\cdot\mathbf{B}_{ms}=\mathbf{0}$
+		\\\mf$\nabla\cross\mathbf{B}=\mu_0\mathbf{J}$%+\epn\mu_0\pdv{\mathbf{E}{t}}$
+		\\\mf$\mathbf{I}=\lambda\mathbf{v}=q/\Delta t$
+		\\\mf$\mathbf{F}=q(\mathbf{E}+\mathbf{v}\cross\mathbf{B})$
+		\\\mf$\mathbf{F}=\int\diff\tau^\prime\mathbf{J}\cross\mathbf{B}$
+		\\\mf$\oint\diff\mathbf{\ell}\cdot\mathbf{B}=\mu_0I_{enc}$
+		\\\mf$ = \mu_0\int\diff\mathbf{a}\cdot\mathbf{J}(\mathbf{r})$
+		\\\mf$\mathbf{B}=\nabla\cross\mathbf{A}$
+		\\\mf$\nabla^2\mathbf{A}=-\mu_0\mathbf{J}$
+
+	}
+	
+}
+\\
+\minibox[frame]{
+\minibox[frame]{
+	\mf$\mathbf{A}(\mathbf{r})=\frac{\mu_0}{4\pi}\int\diff\tau^\prime\frac{\mathbf{J}(\mathbf{r}^\prime)}{\rcurs} \qquad \mathbf{I}\equiv I\diff\boldsymbol{\ell}$
+	\\\mf$\mathbf{v}_\text{rot}=\boldsymbol{\omega}\cross\mathbf{r}^\prime$
+	\\\mf$\nabla\cdot\mathbf{B}=0$
+	\\\mf$\oint\diff\mathbf{a}\cdot\mathbf{B}=0$
+	\\\mf$B_{\mathbf{n},\perp}^{ab}-B_{\mathbf{n},\perp}^{bel}=0$
+	\\\mf$B_{cp,\perp}^{ab} - B_{cp,\perp}^{bel} = \mu_0 K$
+	\\\mf$B_{cp,\parallel}^{ab} - B_{cp,\parallel}^{bel} = 0$
+	\\\mf$\mathbf{B}^{ab}-\mathbf{B}^{bel} = \mu_0\mathbf{K}\cross\mathbf{n}$
+	\\\mf$\mathbf{A}^{ab}-\mathbf{A}^{bel} = 0$
+	\\\mf$\pdv{\mathbf{A}^{ab}}{n} - \pdv{\mathbf{A}^{bel}}{n}=-\mu_0\mathbf{K}$
+	\\\mf$\mathbf{A}_{mp,m}(\mathbf{r})$
+	\\\mf$=\frac{\mu_0}{4\pi}\left[\frac{1}{r}\int\diff\tau^\prime\mathbf{J}(\mathbf{r}^\prime)+\frac{\mathbf{r}}{r^3}\int\diff\tau^\prime\mathbf{r}^\prime\mathbf{J}(\mathbf{r}^\prime)+\cdots\right]$
+	\\\mf$\pdv{\rho}{t}_{ms}=0\quad \int_\mathcal{V}\mathbf{J}(\mathbf{r}^\prime)=\dv{\mathbf{p}}{t}$
+	\\\mf$\mathbf{J}(\mathbf{r}^\prime)=\mathbf{r}^\prime\nabla^\prime\cdot\mathbf{J}(\mathbf{r}^\prime)$
+	\\\mf$\mathbf{m}=\frac{1}{2}\int\diff\tau^\prime\mathbf{r}^\prime\cross\mathbf{J}(\mathbf{r}^\prime)$
+
+
+
+}
+\minibox[frame]{
+	\mf$\mathbf{A}_{dp, m}(\mathbf{r})=\frac{\mu_0}{4\pi}\frac{\mathbf{m}\cross\mathbf{r}}{r^3}$
+	\\\mf$\mathbf{B}_{dp, m}(\mathbf{r})=\frac{\mu_0}{4\pi}\frac{3\mathbf{m}\cdot\hat{\mathbf{r}}\hat{\mathbf{r}} - \mathbf{m}}{r^3}$
+	\\\mf$\nabla\frac{\mathbf{r}}{r^3}=\frac{\mathbb{1}-3\hat{\mathbf{r}}\hat{\mathbf{r}}}{r^3}$
+	\\\mf$\mathbf{m}_{loop}=I\mathbf{a}=I\frac{1}{2}\int\mathbf{r}^\prime\cross\diff\boldsymbol{\ell}^\prime$
+	\\\mf$\mathbf{f}\equiv\mathbf{F}/\mathbf{q} \quad \mathbf{f} \equiv \mathbf{v}\cross\mathbf{B},\mathbf{E}\cdots$
+	\\\mf$\mathbf{J}=\frac{nq^2}{m\gamma}\mathbf{f}=\sigma_{cond}\mathbf{f}$
+	\\\mf$\mathbf{J}=\sigma\mathbf{E}\quad I=\int\mathbf{J}\cdot\diff\mathbf{a}$
+	\\\mf$\varepsilon \equiv \oint\mathbf{f}\cdot\diff\mathbf{l}\quad\mathbf{E}=-\mathbf{f}_{src, ideal}$
+	\\\mf$\varepsilon \equiv \oint\mathbf{E}\cdot\diff\mathbf{l}\quad\varepsilon \equiv IR \quad \varepsilon=-\dv{\Phi_B}{t}$
+	\\\mf$\Phi_B=\int\mathbf{B}\cdot\diff\mathbf{a}\quad \nabla\cross\mathbf{E}=-\pdv{\mathbf{B}}{t}$
+	\\\mf$\oint\diff\boldsymbol{\ell}\cdot\mathbf{E}=-\dv{}{t}\int\diff\mathbf{a}\cdot\mathbf{B}=-d\Phi_B/dt$
+	\\\mf$\nabla\cross\mathbf{B}=\mu_0\mathbf{J}+\mu_0\epsilon_0\pdv{\mathbf{E}}{t}$
+	\\\mf$\oint\mathbf{B}\cdot\diff\boldsymbol{\ell}=\mu_0I_{enc}+\mu_0\epn\int\pdv{\mathbf{E}}{t}\cdot\diff\mathbf{a}$
+	%\\\mf$(\nabla\cdot\mathbf{A})T = \nabla\cdot\mathbf{A} T - \mathbf{A} \cdot\nabla T$
+}
+\minibox[frame]{
+	\mf$\lim\limits_{\mathbf{r}\rightarrow\infty}A\neq0$:
+	\\\mf$\oint\mathbf{A}\cdot\diff\boldsymbol{\ell} = \int\mathbf{B}\cdot\diff\mathbf{a}$
+	\\\mf$\rho,\mathbf{J}=0:$
+	\\\mf$\mathbf{E}\rightarrow\frac{1}{\sqrt{\epn\mu_0}}\mathbf{B}$
+	\\\mf$\mathbf{B}\rightarrow-\sqrt{\epn\mu_0}\mathbf{E}$
+
+
+
+
+}
+}
+\end{document}

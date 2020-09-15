@@ -1,0 +1,184 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{float}
+\usepackage{physics}
+\usepackage{minibox}
+
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand{\normal}{\hat{\mathbf{n}}}
+\newcommand{\epn}{\varepsilon_0}
+\newcommand{\vv}[1]{\tilde{\mathbf{#1}}}
+\newcommand{\unit}[1]{\hat{\mathbf{#1}}}
+\newcommand{\epc}{\tilde{\varepsilon}}
+\newcommand{\diag}{\text{diag}}
+
+
+\def\rcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics[trim= 1em 0 14em 0,clip]{ScriptR}}$}}}
+\def\brcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics[trim= 1em 0 14em 0,clip]{BoldR}}$}}}
+
+\begin{document}
+	\fontsize{13.7pt}{13.7pt}\selectfont
+\minibox[frame,t]{
+	$\oint_\sigma\diff\mathbf{a}\cdot\mathbf{E}=Q_{enc}/\varepsilon_0$
+	\\$\nabla\cdot\mathbf{E}=\rho(\mathbf{r})/\varepsilon_0 \quad \nabla\cross \mathbf{E} = 0$
+	\\$V(\mathbf{r}) = - \int_{\infty/ref}^\mathbf{r}\diff\hat{\mathbf{\ell}}\cdot\mathbf{E}$
+	\\$\Delta V = \int_a^b \diff\hat{\mathbf{\ell}}\cdot\mathbf{E} \quad \mathbf{E} = -\nabla V-\pdv{\mathbf{A}}{t}$
+	\\$C\equiv Q/V_{cap} \quad E_{plane} = \sigma/2\epn$
+	\\$\mathbf{B}=\nabla\cross\mathbf{A}\quad W_E=\frac{\epn}{2}\int\diff\tau E^2$
+	\\$\nabla\cdot\mathbf{B}=0\quad \mathbf{F}=q(\mathbf{E}+\mathbf{v}\cross\mathbf{B})$
+	\\$\mathbf{A}_{dp, m}(\mathbf{r})=\frac{\mu_0}{4\pi}\frac{\mathbf{m}\cross\mathbf{r}}{r^3}$
+	\\$\mathbf{B}_{dp, m}(\mathbf{r})=\frac{\mu_0}{4\pi}\frac{3\mathbf{m}\cdot\hat{\mathbf{r}}\hat{\mathbf{r}} - \mathbf{m}}{r^3}$
+	\\$\mathbf{m}=\frac{1}{2}\int\diff\tau^\prime\mathbf{r}^\prime\cross\mathbf{J}(\mathbf{r}^\prime)$
+	\\$\mathbf{m}=\frac{1}{2}\sum_iq_i\mathbf{r}_i\cross\mathbf{v}_i\quad \mathbf{p} = \sum_iq_i\mathbf{r}_i$
+	\\$\mathbf{m}_{loop}=I\mathbf{a}=I\frac{1}{2}\int\mathbf{r}^\prime\cross\diff\boldsymbol{\ell}^\prime$
+	\\$\mathbf{A}=\frac{1}{2}\mathbf{B}_{unif}\cross\mathbf{r}\quad m\mathbf{v}=\mathbf{p}-q\mathbf{A}$
+	\\$\mathbf{F}=\nabla (\mathbf{m}\cdot\mathbf{B})\quad \mathbf{D}=\varepsilon\mathbf{E}$
+	\\$\mathbf{N} =\mathbf{m}\cross\mathbf{B} \quad \mathbf{M}\equiv\mathbf{m}/\diff\tau$
+	\\$\oint\mathbf{B}\cdot\diff\boldsymbol{\ell}=\mu_0I_{enc}+\mu_0\epn\int\pdv{\mathbf{E}}{t}\cdot\diff\mathbf{a}$
+}
+\minibox[frame,t]{
+	$\mathbf{J} =\frac{nq^2}{m\gamma}\mathbf{f}= \sigma_c\mathbf{f}\equiv \sigma_c\mathbf{E}$
+	\\$\varepsilon \equiv \oint\mathbf{f}\cdot\diff\mathbf{l}\equiv \oint\mathbf{E}\cdot\diff\mathbf{l}\equiv IR \equiv-\dv{\Phi_B}{t}$
+	\\$\Phi_B=\int\mathbf{B}\cdot\diff\mathbf{a}\quad \nabla\cross\mathbf{E}=-\pdv{\mathbf{B}}{t}$
+	\\$\oint\diff\boldsymbol{\ell}\cdot\mathbf{E}=-\dv{}{t}\int\diff\mathbf{a}\cdot\mathbf{B}=-d\Phi_B/dt$
+	\\$\Phi_2=MI_1 \quad I_1=I_2\Rightarrow\Phi_1=\Phi_2$
+	\\$\Phi=LI \quad \varepsilon = - L\dv{I}{t}$
+	\\$B_\perp^a-B_\perp^b=0 \quad D_\perp^a-D_\perp^b=\sigma_f$
+	\\$E_\parallel^a-E_\parallel^b=0\quad\mathbf{H}_\parallel^a-\mathbf{H}_\parallel^b=\mathbf{K}_f\cross\hat{\mathbf{n}}$
+	\\$\mathbf{S}=\frac{1}{\mu_0}(\mathbf{E}\cross\mathbf{B})\quad P=\int\mathbf{S}\cdot\diff\mathbf{a}$
+	\\$\pdv{U}{t}+\nabla\cdot\mathbf{S}= 0\quad \mathbf{p}_{eb}=\epn\mathbf{E}\cross\mathbf{B}$
+	\\$\frac{\partial}{\partial t}(\mathbf{p}_{m}+\mathbf{p}_{eb}) + \nabla\cdot\overleftrightarrow{T} = 0$
+	\\$T_{ij}=-U_{eb}\delta_{ij}+\epn E_iE_j+\frac{1}{\mu_0}B_iB_j$
+	\\$F_i=\sum_j\oint\diff a^jT_{ij} - \epn\mu_0\dv{}{t}\int S_i\diff\tau$
+	\\$\mathcal{L}_{eb} = \mathbf{r}\cross\mathbf{p}_{eb}\quad W_B=\frac{1}{2}LI^2$
+	\\$\equiv\frac{1}{2}\int\diff\tau\mathbf{J}\cdot\mathbf{A}\equiv\frac{1}{2\mu_0}\int\diff\tau B^2$
+}
+\minibox[frame,t]{
+	$\mathbf{A}(\mathbf{r}) = \frac{\mu_0}{4\pi}\int\diff\tau^\prime\mathbf{M}(\mathbf{r}^\prime)\cross\frac{\hat{\brcurs}}{\rcurs^2}$
+	\\$\mathbf{A}(\mathbf{r}) = \frac{\mu_0}{4\pi}\int\diff\tau^\prime\frac{\mathbf{J}_b(\mathbf{r}^\prime)}{\rcurs}$
+	\\$+\frac{\mu_0}{4\pi}\oint\diff a^\prime\frac{\mathbf{K}_b(\mathbf{r}^\prime)}{\rcurs}$
+	\\$\mathbf{K}_b(\mathbf{r}^\prime)=\mathbf{M}\cross\hat{\mathbf{n}}^\prime$
+	\\$\mathbf{J}_b(\mathbf{r}^\prime)=\nabla^\prime\cross\mathbf{M}(\mathbf{r}^\prime)$
+	\\$\mathbf{H} = \frac{1}{\mu_0}\mathbf{B}-\mathbf{M}$
+	\\$\nabla\cross\mathbf{H}=\mathbf{J}_f+\pdv{\mathbf{D}}{t}$
+	\\$\oint\diff\mathbf{\ell}\cdot\mathbf{H}=I_{f,enc}=\int\diff\mathbf{a}\cdot\mathbf{J}_f$
+	\\$\mathbf{M}=\chi_m\mathbf{H} \quad \mathbf{B}=\mu\mathbf{H}$
+	\\$\chi_{m,dia}=-\frac{n\mu_0}{6}\sum_i\frac{q_i^2}{m_i}r_i^2$
+	\\$B_{s}=\mu_0NI \quad B(r)_{tr}=\frac{\mu_0NI}{2\pi r}$
+	\\$\mathbf{F}=\int\diff\tau[\rho\mathbf{E}+\mathbf{J}\cross\mathbf{B}]$
+	\\$\nabla\cross\mathbf{B}=\mu_0\mathbf{J}+\mu_0\varepsilon_0\pdv{\mathbf{E}}{t}$
+	\\$U_{eb}=\frac{1}{2}(\epn E^2 + \frac{1}{\mu_0}B^2)$
+	\\$\nabla\frac{1}{\rcurs}=-\frac{\hat{\brcurs}}{\rcurs^2}\quad\nabla\cdot\mathbf{D}=\rho_f$
+}
+\\
+\minibox[frame,t]{
+	$\left(\nabla^2-\frac{1}{c^2}\frac{\partial^2}{\partial t^2}\right)\begin{pmatrix}\mathbf{E}\\\mathbf{B}\end{pmatrix}=0 \quad n= \frac{c}{v} $
+	%\\$T=\frac{\lambda}{v}\quad \nu=\frac{1}{T} \quad \omega=2\pi\nu=\frac{2\pi}{T}=kv$
+	\\\vspace{-0.8em}
+	\\$\tilde{\mathbf{E}}=\tilde{\mathbf{E}}_0 e^{i(kx-\omega t)} \quad\tilde{\mathbf{B}}=\tilde{\mathbf{B}}_0 e^{i(kx-\omega t)}$
+	%\\$\partial_x\vv{E}_z=\partial_t\vv{B}_y \quad \partial_x\vv{E}_y=-\partial_t\vv{B}_z$
+	%\\$-\vv{E}_{0z}=\frac{\omega}{k}\vv{B}_{0y}=c{B}_{0y} \quad \vv{E}_{0y}=c\vv{B}_{0z}$
+	\\$\vv{B}=\frac{1}{c}\unit{x}\cross\vv{E} \quad \unit{n}\equiv\cos\vartheta\unit{y}+\sin\vartheta\unit{z}$
+	\\\vspace{-0.8em}
+	\\$\vv{E}=\vv{E}_0e^{i(\mathbf{k}\cdot\mathbf{r}-\omega t)}\unit{n} \quad v_k=\omega/k$
+	\\$\vv{B}=\frac{1}{c}\vv{E}_0e^{i(\mathbf{k}\cdot\mathbf{r}-\omega t)}\unit{x}\cross\unit{n}=\frac{1}{c}\unit{x}\cross\vv{E}$
+	\\$\mathbf{E}=\Re\vv{E}=E_0\cos(kx-\omega t + \delta_E)\unit{y}$
+	\\$\mathbf{B}=\frac{E_0}{c}\cos(kx-\omega t + \delta_B)\unit{z} \quad \delta=\delta$
+	\\$S=cU_{eb}\quad \mathbf{p}_{eb}=\mathbf{S}/c^2=\unit{x}U_{eb}/c$
+	\\$\left<U\right>=\frac{1}{2}\epn E_0^2\quad \left<\mathbf{S}\right>=c\left<U\right>\unit{x} $
+	\\$\left<\mathbf{p}\right>=\frac{\left<U\right>}{c}\unit{x}\quad I=\left<S\right>=\frac{1}{2}c\epn E_0^2$
+	%\\$e^{i\vartheta}=\cos\vartheta+i\sin\vartheta\quad \left<\cos^2\vartheta\right>=\frac{1}{2}$
+	\\$\vv{E}_1=\vv{E}_I+\vv{E}_R \quad \vv{E}_2=\vv{E}_T$
+	%\\$\varepsilon_1E_{1\perp}=\varepsilon_2E_{2\perp}\quad \vv{E}_{1\parallel}=\vv{E}_{2\parallel}$
+	%\\$\vv{B}_{1\perp}=\vv{B}_{2\perp}\quad \frac{1}{\mu_1}\vv{B}_{1\parallel}=\frac{1}{\mu_2}\vv{B}_{2\parallel}$
+	%\\$\omega_I=\omega_R=\omega_T \quad \frac{k_I}{k_T}=\frac{n_1}{n_2}$
+	%\\$k_I\sin\vartheta_I=k_R\sin\vartheta_R=k_T\sin\vartheta_T$
+	\\$\frac{v_2}{v_1}=\frac{n_1}{n_2}=\frac{\sin\vartheta_T}{\sin\vartheta_I} \quad \alpha\equiv\frac{\cos\vartheta_T}{\cos\vartheta_I}$
+	\\$\beta\equiv\frac{\mu_1n_2}{\mu_2n_1}\hspace{0.5em} \tilde{E}_{0}^T=\frac{2\tilde{E}_{0I}}{\alpha+\beta} \quad \tilde{E}_{0}^R=\frac{\alpha-\beta}{\alpha+\beta}\tilde{E}^I_{0}$
+	\\$\alpha^2=\beta^2\rightarrow\vartheta_I=\vartheta_B\rightarrow E_{0R}=0$
+}
+\minibox[frame,t]{
+	$\alpha=\frac{\sqrt{1-\left({n_1}/{n_2}\right)^2\sin^2\vartheta_I}}{\cos\vartheta_I}\quad \mu_1\simeq\mu_2:$
+	\\$\sin^2\vartheta_B=\frac{\beta^2}{1+\beta^2}\quad \vartheta_B\simeq\tan^{-1}\frac{n_2}{n_1}$
+	\\$R=\frac{(\alpha-\beta)^2}{(\alpha+\beta)^2}\quad   T=\alpha\beta\left(\frac{2}{\alpha+\beta}\right)^2$
+	\\$\sin\vartheta_c=\frac{n_2}{n_1}\equiv\frac{\sin\vartheta_I}{\sin\vartheta_T}$
+	%\\$\sin\vartheta_c=\frac{n_2}{n_1}\equiv\frac{\sin\vartheta_I}{\sin\vartheta_T}$
+	\\$\cos\vartheta_T=i\sqrt{\left(\frac{\sin\vartheta_I}{\sin\vartheta_c}\right)^2-1}$
+	\\$\tilde{\varepsilon}=\varepsilon+\frac{i\sigma_c}{\omega} \quad \nabla\cross\mathbf{B}=\tilde{\varepsilon}\mu\pdv{\mathbf{E}}{t}$
+	\\$\tilde{k}=\omega\sqrt{\epc\mu}=k_++ik_-$
+	\\$k_\pm=\omega\sqrt{\frac{\varepsilon\mu}{2}}\sqrt{\sqrt{1+\left(\frac{\sigma_c}{\omega\varepsilon}\right)^2}+1}$
+	\\$\left<\mathbf{S}\right>_{c}=\unit{x}\frac{k_+}{2\mu\omega}E_0^2e^{-2k_-x}\quad v_g=\dv{\omega}{k}$
+	\\$\dv{W}{t}=\int_V\diff\tau\mathbf{J}\cdot\mathbf{E} \quad \vv{p}=q\vv{r}$
+	\\$(-\omega^2+\omega_0^2-i\gamma\omega)\vv{r}=\frac{q}{m}e^{-i\omega t}\vv{E}_0$
+	\\$n\simeq1+\frac{1}{2}\frac{Nq^2}{m\epn}\sum_i\frac{f_i(\omega_i^2-\omega^2)}{(\omega_i^2-\omega^2)^2+(i\gamma\omega)^2}$
+}
+\minibox[frame,t]{
+	$\left[\pdv[2]{}{y}+\pdv[2]{}{z}+\left(\frac{\omega}{c}\right)^2-k^2\right]\begin{pmatrix}E_x\\B_x\end{pmatrix}=0$
+	\\$-\nabla^2G(\mathbf{r},\mathbf{r}')=4\pi\delta(\mathbf{r}-\mathbf{r}')$
+	\\$G(\mathbf{r},\mathbf{r}')=\int\frac{\diff\mathbf{k}e^{i\mathbf{k}\cdot(\mathbf{r}-\mathbf{r}')}}{2\pi^2k^2}=\frac{1}{|\mathbf{r}-\mathbf{r}'|}$
+	\\Lorenz: $\nabla\cdot\mathbf{A}+\frac{1}{c^2}\pdv{V}{t}=0$
+	\\$-\square^2\begin{pmatrix}V\\\mathbf{A}\end{pmatrix}=\begin{pmatrix}\rho/\epn\\\mu_0\mathbf{J}\end{pmatrix}\quad t_r=t-\frac{\rcurs}{c}$
+	\\$G_{ret}=\frac{1}{\rcurs}\delta\left(\frac{\rcurs}{c}-(t-t')\right)$
+	\\$V=\int\diff\tau'\frac{\rho(\mathbf{r}',t_r)}{4\pi\epn\rcurs} \quad \mathbf{A}=\int\diff\tau'\frac{\mu_0\mathbf{J}(\mathbf{r}',t_r)}{4\pi\rcurs}$
+	\\$\mathbf{B}=-\frac{\unit{r}}{c}\frac{\mu_0}{4\pi r}\int\diff\tau '\pdv{\mathbf{J}(\mathbf{r}',t_r)}{t}\quad \hspace{-0.2cm}P=\frac{\mu_0q^2a^2}{6\pi c}$% \quad \mathbf{E}=-c\unit{r}\cross\mathbf{B}$
+	\\$\dv{P}{\Omega}=\frac{\mu_0}{(4\pi)^2c}\left[\unit{r}\cross\int\diff\tau '\pdv{\mathbf{J}(\mathbf{r}',t_r)}{t}\right]^2$
+	\\$P=\frac{\mu_0}{6\pi c}\left[\ddot{p}^2(t_r)+\frac{1}{c^2}\ddot{m}^2(t_r)\right]$
+	\\$\begin{pmatrix}\mathbf{p}\\\mathbf{m}\end{pmatrix}=\begin{pmatrix}p_0\\m_0\end{pmatrix}\unit{z}\cos\omega t$
+}
+\minibox[frame,t]{
+	$\gamma\equiv \frac{1}{\sqrt{1-v^2/c^2}} \quad x'=\gamma(x-vt)$
+	\\$y'=y \quad z'=z \quad t'=\gamma(t-\frac{v}{c^2}x)$
+	\vspace{0.1cm}
+	\\$u_x'=\dv{x'}{t'}=\frac{u_x-v}{1-vu_x/c^2}$
+	\vspace{0.1cm}
+	\\$u_y'=\dv{y'}{t'}=\frac{u_y}{\gamma(1-vu_x/c^2)}$
+	\vspace{0.1cm}
+	\\$u_z'=\dv{z'}{t'}=\frac{u_z}{\gamma(1-vu_x/c^2)}$
+	\\$\beta^{(\prime)}\equiv u_x^{(\prime)}/c \quad \beta_r=v/c$
+	\\$\beta=\tanh\vartheta$
+	\\$\vartheta=\vartheta'+\vartheta_r$
+	\\$\Delta x=\Delta x'\cosh\vartheta_r+c\Delta t'\sinh\vartheta_r$
+	\\$c\Delta t=c\Delta t'\cosh\vartheta_r+\Delta x\sinh\vartheta_r$
+	\\$\sinh\vartheta=\tanh\vartheta\cosh\vartheta$
+	\\$\vartheta\equiv\ i\tilde{\vartheta}: \sinh i\tilde{\vartheta}\equiv i\sin\tilde{\vartheta}$
+	\\$\cosh i\tilde{\vartheta}\equiv \cos\tilde{\vartheta} \quad T=ict$
+	\\$X=X'\cos\tilde{\vartheta}+T'\sin\tilde{\vartheta}$
+	\\$T=-X'\sin\tilde{\vartheta}+T\cos\tilde{\vartheta}$
+}
+\minibox[frame,t]{
+	$\diff\tau\equiv \diff t/\gamma \quad \beta\equiv v/c$
+	\\$x^\mu=(ct,x,y,z) \quad x_\mu=g_{\mu\nu}x^\nu$
+	\\$g_{\mu\nu}\equiv\eta_{\mu\nu}=\diag(-1,1,1,1)$
+	\\$\diff s^2=-c^2\diff t^2+\diff x^2+\diff y^2+\diff z^2$
+	\\$x'^\mu=\Lambda_\nu^\mu x^\nu$
+	\\$\Lambda_\nu^\mu\equiv\begin{pmatrix}\gamma & -\gamma\beta & 0 & 0 \\ -\gamma\beta & \gamma & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1\end{pmatrix}$
+	\vspace{0.2cm}
+	\\$\partial_\mu\equiv\pdv{}{x^\mu}\quad \partial^\mu\equiv\pdv{}{x_\mu}$
+	\\$F'^{\mu\nu}=\Lambda_\kappa^\mu\Lambda_\lambda^\nu F^{\kappa\lambda} \quad \diff s^2=-c^2\diff\tau^2$
+	\\$\eta^\mu=\dv{x^\mu}{\tau} \quad \eta=\eta^\mu\eta_\mu=-c^2$
+	\\$p^\mu\equiv m\eta^\mu \quad p^0=E/c \quad E=\gamma mc^2$
+	\\$p^2=p^ip_i \quad E^2=p^2c^2+m^2c^4$
+	\\$\sum_i p_i^\mu=\sum_jp_j^\nu \quad J^\mu\equiv (c\rho, \vec{J})$
+	\\$F^{\mu\nu}\equiv \partial^\mu A^\nu -\partial^\nu A^\mu \quad \partial_\mu J^\mu=0$
+	\\$A^\mu=(V/c,\vec{A}) \quad F^{ij}=\varepsilon^{ijk}B_k$
+}
+\fontsize{12.0pt}{12.0pt}\selectfont
+\minibox[frame,t]{
+	$B_i=\partial_j A_k -\partial_k A_j \quad F^{\mu\mu}=0$
+	\\$F^{0i}=E^i/c \quad \varepsilon^{123}\equiv 1  \quad F^{\mu\nu}=-F^{\nu\mu}$
+	\\$F^{\mu\nu}\equiv\begin{pmatrix}0 & E_x/c & E_y/c & E_z/c \\ -E_x/c & 0 & B_z & -B_y \\ -E_y/c & -B_z & 0 & B_x \\ -E_z/c & B_y & -B_x & 0\end{pmatrix}$
+	\\$G^{\mu\nu}\equiv\begin{pmatrix}0 & B_x & B_y & B_z \\ -B_x & 0 & -E_z/c & E_y/c \\ -B_y & E_z/c & 0 & -E_x/c \\ -B_z & -E_y/c & E_x/c & 0\end{pmatrix}$
+	\\$\vec{E}\rightarrow c\vec{B} \quad \vec{B}\rightarrow -\vec{E}/c \quad G^{\mu\nu}=\frac{1}{2}\varepsilon^{\mu\nu\alpha\beta}F_{\alpha\beta}$
+	\\$\partial_\nu F^{\mu\nu}=\mu_0 J^\mu \quad \partial_\nu G^{\mu\nu}=0$
+	\\$B_3'=\gamma(b_3-\frac{v}{c^2}E_2) \quad B_2'=\gamma(B_2+\frac{v}{c^2}E_3)$
+	\\$E'_x=E_x \quad B_x'=B_x \quad -\partial^\mu\partial_\mu A^\nu=\mu_0 J^\nu $
+
+}
+
+
+\end{document}
