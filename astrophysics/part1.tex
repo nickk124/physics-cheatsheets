@@ -1,0 +1,365 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{float}
+\usepackage{physics}
+\usepackage{minibox}
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\begin{document}
+	\fontsize{6pt}{7pt}\selectfont
+\subsubsection{Geometry and Basics}
+\minibox[frame]{\includegraphics[width=0.13\linewidth]{angle}}
+\minibox[frame]{arc length $l=\theta R$ \textbf{IN RADIANS}
+\\$v_t=\omega r, \quad \omega = 2\pi f, \quad F_c = m\omega^2r$
+\\ 1 as = $4.85 \times 10^{-6}\,$ rad
+\\ $ s = 2R\sin\frac{\theta}{2}\simeq R \theta$ at $ R \gg l$ 
+\\ parallax angle $\alpha,\quad \sin\alpha=R/d$
+\\R = 1 AU = $1.5 \times 10^8$ km
+\\$\alpha \simeq R/d$ as $d \ll R$ \textbf{IN RADIANS}
+\\ 1 pc = d such that $\alpha$= 1 as
+\\$pc \propto \frac{1}{as}$}
+\minibox[frame]{\includegraphics[width=0.24\linewidth]{parallax}}	
+\minibox[frame]{Center of Mass: $x_{COM}=(\sum\limits_i M_ix_i)/M_{total}$
+\\Where x=0 can be defined however.
+\\Solid Angle: $\Omega \equiv A/R^2$ where A, R some\\ surface area outlined by $\Omega$, R is r of sphere.
+\\$SA_{sphere} = 4\pi R^2 \quad \diff\Omega=\sin\theta\diff\theta\diff\phi$
+\\$V_{sphere} =\frac{4}{3}\pi r^3$
+\\OBAFGKM in dec. order of $T_{surf}$.
+\\1 dyne = $10^{-5}$ N
+\\1 erg = $10^{-7} J$
+\\Luminosity classes: I through V, on HR diagram, lines 
+\\from top downwards, sorted by width of spectral lines.
+}
+\subsubsection{Gravitation and Kepler's Laws}
+\minibox[frame]{
+	\textbf{Shell Theorem:}
+	\\1. No grav force on objects inside \textbf{spherical} shell
+	\\2. Spherically symmetric objects can be treated as point masses
+	\\ \textbf{Kepler's Laws}
+	\\1st The C.O.M. of a system does not accel.; 
+	\\can choose a ref frame where it's stationary.
+	\\3rd: For m orbiting M, with orbital radius R: \\If $M\gg m$: $ P^2 =\frac{4 \pi^2}{GM}R^3$
+	\\If M is \textbf{not} $\gg m$: $P^2 =\frac{4 \pi^2}{G(M+m)}a^3$; $MR = mr$; $a= r+R$
+	\\$R_{M}=ma/(m+M)\quad r_{m}=Ma/(M+m)$
+	\\where $a$ is the \textit{distance between the two masses} and $P$ is the \\orbital period of both.
+	\\$F=\frac{GMm}{r^2}$ \\Motions Find Mass: $ v_t^2 = \frac{GM(<r)}{r}$
+	\\Sun BB curve lower on side of lower WL cause these \\get absorbed by n=2 H gas in sun atmos.
+
+}
+\minibox[frame]{\includegraphics[width=0.3\linewidth]{flux}
+	\\Eventually derives: $F_\lambda = \pi I_\lambda \frac{R^2}{d^2}$ (unresolved)}
+\minibox[frame]{\includegraphics[width=0.33\linewidth]{stel}
+	\\}
+\subsubsection{Intensity, Flux, Luminosity, Etc (Light Stuff)}
+\minibox[frame]{$I_\lambda=energy/(\diff t \diff A_\perp \diff \Omega \diff \lambda)$
+\\$\diff A_\perp$ is the area vector for a chosen ray.
+\\$F=energy/(\diff t \diff A \diff \lambda)$ 
+\\is the integral of I over all solid angles.
+\\$L = energy/\diff t$
+\\$I$ and $F$ don't have to be per $\lambda$.
+\\$F_{obs\, (unresolved)}=L/4\pi d^2=(R^2F_{surf}/d^2)$
+\\$F_{\lambda (resolved)} = \pi I_\lambda  \theta_{pixel}^2$
+\\$F_{surf} = \pi I$
+\\$L = 4\pi R_{object}^2 F_{surf}$
+\\SB Law: $F_{surface} = \sigma T^4$
+\\$Period_{variable\, star} \propto L$
+\\\textbf{Blackbody}: $B_\lambda=(2hc^2/\lambda^5)/(e^{hc/\lambda kT}-1)$
+\\$B_\nu = (2h\nu^3/c^2)/(e^{h\nu/kT}-1)$
+\\\textbf{$\therefore E$ is linear wrt to $\nu,$ but not $\lambda$. }
+\\Wein's Law: $\lambda_{max} = (2.9 \,mm)/T$ (max of BB curve)
+\\\textbf{Doppler (Angular other side)}: $\lambda_{obs} =\lambda_{em}\sqrt{\frac{1-v/c}{1+v/c}}$ 
+\\$\Delta \lambda/\lambda = \gamma -1$
+\\ If $v \ll c$: $\lambda_{obs} =\lambda_{em}(1-v/c)$
+\\$\frac{\lambda_{obs}-\lambda_{em}}{\lambda_{em}}=\frac{-v}{c}=z$ , sign of v is neg if moving away
+\\Rot Broadening: $\Delta \lambda/\lambda=2 v_{rot}/c$
+\\Thermal Broadening:  $\frac{\Delta \lambda}{\lambda}\approx\frac{2}{c}\sqrt{\frac{2kT}{m_{particle}}}$
+\\Pressure Broadening: $\frac{\Delta \lambda}{\lambda}\propto P$
+\\local thermodynamic equil (local blackbody:) $l_{mfp} \ll h_T$
+\\$h_T$ is the temperature scale height
+
+}
+\minibox[frame]{
+\minibox[frame]{\includegraphics[width=0.4\linewidth]{resolved}
+	\\So for resolved ($>1$ pixel): $F_\lambda = \pi 
+	I_\lambda  \theta_{pixel}^2$}
+\minibox[frame]{\textbf{Eclipsing Binaries}
+\\1. Went through files to determine highest 
+\\stdev in Mag (time originally in MJD)
+\\2. Supersmoother metric was made to measure 
+\\the deviation of adjacent phased-up points:
+\\3. Looped through possible periods, phased up 
+\\epochs for each, plotted ssm data (average of 
+\\abs. dif b/w adjacent, "zeroed" mags \\(mags-median[mags]) vs possible periods to 
+\\determine period
+\\4. Period used to phase epochs correctly 
+\\and plot light curve (zeroed mags vs. 
+\\phased epochs)
+\\Binary systems: redshift reveals P and v, 
+\\that leads to masses.
+
+}
+	\\\textbf{0.0.4 Microscopic Physics}
+\minibox[frame]{$E_n=\frac{-13.6 \, eV}{n^2} \qquad E_\gamma = hf \qquad f =c/\lambda \qquad \Delta p_x \Delta x > h \quad $
+	\\$\Delta n$ requires exact amount of E (like ladder) besides ionization.
+	\\$P_{degen}=\kappa\rho^{m+1}$, m =2/3 for non-rel, m=1/3 for rel.}
+\\
+\minibox[frame]{\textbf{Hydrogen Emission}\\
+	\begin{tabular}{|c|c|}
+		\hline 
+		$n_f$ & Name, Type \\ 
+		\hline 
+		1 & UV, Lyman \\ 
+		\hline 
+		2 & Visible, Balmer \\ 
+		\hline 
+		3 & IR, Paschen \\ 
+		\hline 
+\end{tabular}}
+\minibox[frame]{\textbf{MFP stuff}
+%\\$V_{swept out} = l_{path}[\pi (2r)^2]=l_{path}\sigma$
+\\cross section $\sigma =\frac{ No.\, of\, events}{(No.\, density\, of\, targets) * (l\, traveled)}$
+\\Prob of event $=\sigma l_{path} n$
+\\$l_{mfp} = 1/(n\sigma)$
+\\$\tau=\frac{l_{medium}}{l_{mfp}}$ , $\tau \gg 1$: optically thick
+
+}
+\minibox[frame]{$\int\frac{\diff I_\lambda(l)}{I_\lambda}=-\int n \sigma_\lambda \diff l \quad \tau_\lambda = nl\sigma_\lambda$
+\\$\downarrow$
+\\$I_\lambda = I_{(\lambda, 0)}e^{-\tau_\lambda}$
+}
+\\
+\\$ \Delta M = M_f - M_i= -2.5\log_{10}(F_1/F_2) \quad \gamma = 1/\sqrt{1-v^2/c^2} \quad t' = t\gamma \quad X_{element}=\rho_{element}/\rho_{total}$ (Mass fraction)
+\\hyperfine hydrogen n=1: $f_{up\rightarrow down}= 1420 $ MHz, $\lambda$ = 21 cm}
+\subsubsection{Stellar Physics}
+\minibox[frame]{\textbf{Virial Thm Stuff and More}
+	\\$U_{grav}+2K=0$
+\\$K_{system}=\frac{3}{2}NkT=\frac{3}{2}\frac{M_{system}}{\overline{m}_{particle}kT}$
+\\$U_{grav} = -\int\limits_0^R\frac{GM(<r)\rho(r)4\pi r^2 dr}{r}$ 
+\\\textbf{U is negative!}, increases (less negative) as dist. increases
+\\If $\rho$ is constant, $U_{grav}=-\frac{3GM_{star}^2}{5R_{star}}$
+\\$E_{total}=U_{grav}/2=\frac{-GM^2}{2R}$ (also neg)
+\\$E_{thermal} = -E_{total}$
+\\$PV=NkT \quad P=nkT \quad PV = \frac{2}{3}K$ Relativ: $PV=\frac{1}{3}K$
+\\$P=-\frac{1}{3}\frac{U_{grav}}{V}\quad |U_{grav}|\approx \frac{GM^2}{R}\quad P \approx \left(\frac{4\pi}{3^4}\right)^{1/3}GM^{2/3}\rho^{4/3}$
+\\$P_{radiational}=\frac{1}{3}aT^4 \quad N = M_{total}/\overline{m}$
+\\Isotropic Pressure: both radiational and kinetic
+\\$L \propto T^4R^2$
+\\$L \propto T_{surf}^8$
+\\$\uparrow T \,\rightarrow \,\uparrow R$ due to increased P and V
+
+}
+\minibox[frame]{\textbf{Stellar Interior ODEs}
+	\\$\dv{M(<r)}{r}=4\pi r^2\rho$
+\\ $\boxed{\dv{P}{r} = -\frac{GM(<r)}{r^2}\rho}$
+\\ $P = n_{(no. density)}kT = \frac{\rho}{\overline{m}_{particle}}kT$
+\\ $\dv{L}{r} = 4\pi \rho r^2 \epsilon, \quad \epsilon\equiv \frac{E\, produced}{mass}$
+\\
+\\ $\dv{T}{r} = -\frac{1}{4\sigma_{S-B}T^3}\cdot\frac{1}{l_{mfp-\gamma}}\cdot\frac{L}{4\pi r^2}$
+\\Approximating these as power laws gives:
+\\$P \approx \frac{M\rho}{r} \quad M \approx r^3\rho \quad L\approx \frac{T^4r}{\kappa \rho}$
+}
+\minibox[frame]{\textbf{Thermostat Cycle in core:}
+\\fusion rate $\propto T \rightarrow\, T \uparrow \rightarrow\, P \uparrow \rightarrow\,$ core expands
+$\rightarrow\,$
+\\ core cools $\rightarrow\,$ T/fus rate $\downarrow\, \rightarrow\, P\downarrow \rightarrow\,$ core contracts
+$\rightarrow\,$\\$ T\uparrow:$ REPEAT. 
+	
+\\
+\minibox[frame]{\textbf{Stellar Reactions}
+	\\p-p chain: $6p^+ 2e^- \rightarrow 2p^+ + ^4He + 2\nu_e$
+	\\ $\Delta m =0.7\% \,of\, 4m_p,\quad E = 25.71 MeV$
+	\\ For $M>1.2M_\odot$: (also a bit for lesser masses)
+	\\CNO Cycle: same net cycle as p-p, just diff. steps
+}
+}
+\\
+\minibox[frame]{\textbf{Useful TPS}
+	
+	
+	
+}
+\subsubsection{Stellar Evolution A: Main Sequence, White Dwarfs, Supermassive Stars}
+\minibox[frame]{
+\minibox[frame]{\textbf{Main Sequence}
+		\\$L \approx M^{3.5}$
+		\\MS lifetime $\tau \propto 1/M^{2.5}$
+		\\$ L \propto T_{surf}^8$
+	
+}
+\minibox[frame]{\textbf{Massive Stars}
+	In chronological order of
+	\\ fusion reactant shells in deep core
+	\\ (if hot/massive enough):
+	\\H, He, C, O, Ne, Si, Fe
+	\\ \textbf{end in Core Collapse Supernovae},
+		\\(type II, or type Ib/Ic if no H left)
+}
+\\
+\minibox[frame]{\textbf{White Dwarfs}
+		\\$ R \propto R_{c}, \quad \overline{\rho} \propto \rho_{c}, \quad L \propto R^2T^4, \quad R_{WD} \approx 7000 \, km \left(\frac{M}{M_\odot}\right)^{-1/3}\propto \frac{1}{m_e}$
+
+\\\textbf{Non-rel}: $M \propto \rho_{c}^{1/2}\rightarrow R_{WD} \propto M^{-1/3}$
+\\$\downarrow$ as M added
+\\\textbf{Rel:} $M \propto \rho_{c}^{0} \rightarrow$trying to increase $\rho_{c}$ will not increase M
+\\Max $M_{WD} = M_{ch} = 1.4 M_\odot$
+\\Using Virial Thm, and formula for $P_{degen}$ \& $\rho^{4/3} = \frac{M^{4/3}}{V^{4/3}}$:
+\\$\overline{P}V=\left(\frac{3}{8\pi}\right)^{1/3}\frac{hc}{4m_p^{4/3}}\left(\frac{Z}{A}\right)^{4/3}\frac{M^{4/3}}{V^{1/3}} = -\frac{1}{3}U_{grav}=-\frac{1}{3}\frac{GM^2}{R}$
+\\\textbf{Where Z is proton count, A is nucleon count}
+\\Solve for M, gives: $M = \left[\frac{3}{10}\left(\frac{9}{32\pi^2}\right)^{1/3}\frac{hc}{Gm_p^{4/3}}\right]^{3/2} = 0.8 M_\odot$
+\\This is off, actually $M_{ch} = 1.4 M_\odot$, minimum mass for Ia novae
+\\
+\\Once WD gets enough mass via accretion, carbon in core begins\\ fusing, except not, thermostat is broken, as unlike normal stars, T \\does not affect P. 
+\\Surface grav: $g=\frac{GM}{R^2}$
+}
+}
+\minibox[frame]{\includegraphics[width=0.5\linewidth]{evolution}
+\\Stars peel of main sequence like a banana, starting from highest L}
+\subsubsection{Stellar Evolution B: Core Collapse Supernovae, Neutron Stars}
+\minibox[frame]{\textbf{Core Collapse Timeline}
+	\\\textbf{FOR STARS} M$>8M_\odot$
+	\\\textbf{1.} iron core grows until reaching $M_{ch}$, 
+	\\after which $e^-$ degen pressure can't support it anymore.
+	\\\textbf{2.} Core collapses, hot $\gamma$'s break up iron \\nuclei into He, then p and n, cooling the core \\(these rxns use E, at the end basically only p, n left):
+	\\$ \gamma + ^{56}Fe \rightarrow 13^4He +4n$
+	\\then $ \gamma + ^4He \rightarrow 2p + 2n$
+	\\\textbf{3.} $e^-$ absorbed into p (and other nuclei)
+	\\making $\nu_e$ \& n, further cooling core:
+	\\$e^- + p \rightarrow n + \nu_e$
+	\\\textbf{4} Now the core is mostly neutrons.
+	
+}
+\minibox[frame]{
+\minibox[frame]{\\\textbf{Energy released in core collapse}
+	\\Total change in $U_{grav} = 5 \times 10^{53}\, ergs$
+	\\Energy used in:
+	\\10\% for nuclei breakup
+	\\1\% for debris KE
+	\\0.01\% for luminosity
+	\\89\% in released $\nu$'s
+}
+\\
+\minibox[frame]{\textbf{Other Stellar Interior Equations}
+	\\Where L is luminosity and dL 
+	\\is luminosity of shell, $\epsilon(r)$ \\is energy produced per unit mass:
+	\\$L+\diff L = L+M_{shell} \times \epsilon(r)$
+	\\$ \diff L = 4\pi \rho r^2 \diff r \times \epsilon(r)$
+	\\$\boxed{\dv{L}{r}=4\pi \rho r^2 \epsilon (r)}$}
+}
+\minibox[frame]{\textbf{Neutron Stars} 
+	\\(the collapsed iron cores of supergiants)
+	\\$R_{NS}\simeq \frac{m_e}{m_n}\simeq 11\, km \left(\frac{M}{1.4M_\odot}\right)^{-1/3}$
+	\\$M_{max} \approx 0.2\left(\frac{Z}{A}\right)^2\left(\frac{hc}{Gm_p^2}\right)^{3/2}\times m_p$
+	\\ Where $\frac{Z}{A} = 1$ (no protons)
+	\\So $M_\text{max} \approx 5.6M_\odot$ \textbf{WRONG!}
+	\\Accounting for strong force b/w 
+	\\neutrons, and degen pressure 
+	\\contributing to gravitation (due to GR):
+	\\$\boxed{M_{NS, max} \simeq 2-3 M_\odot}$
+	\\Above this, a black hole will form,
+	\\ as degen press. can't beat gravity
+	\\\textbf{Pulsars}
+	\\Jets created by strong magnetic field
+	
+}
+\minibox[frame]{
+\minibox[frame]{\textbf{Degeneracy Pressure}
+	\\Using the stellar interior equations, \\and $P_{degen}=\kappa\rho^{m+1}$, you arrive at:
+	\\$ \dv{P}{r}=\kappa (m+1)\rho^m\dv{\rho}{r}$
+	\\To solve this, switch to dimensionless 
+	\\variables, $x=\rho/\rho_{center}$
+	\\$ R \propto R_{core}; \overline{\rho} \propto \rho_{core}$}
+\\
+\minibox[frame]{\textbf{Wien's Law Derivation}
+\\set $\dv{B_\lambda}{\lambda} = 0=\frac{xe^x}{e^x-1} -5$
+\\Where $x=hc/\lambda k T$
+\\Solved numerically to find $x\simeq 4.965$
+
+}
+}
+\subsubsection{Derivations}
+\minibox[frame]{\textbf{Shell Thm}
+	\\1. Divide spherical shell of mass $M$, radius $R$ into individual rings 
+	\\with masses $\diff M$. $a$ is dist from test mass to given ring. 
+	\\Use $F_g$ formula to determine$\diff F_g$ b/w test mass $m$ and $\diff M$.	
+	\\2. $\diff M$ can be writtin in terms of sphere surface \\density $\rho$. Use this to write $\diff F_g$ in terms of \\integratable differentials. Integrate over all rings ($\theta$) to find $F_g$.
+	\\$ \diff F_g = \frac{Gm\diff M}{a^2}\cos\phi, \quad \diff M = \rho 2 \pi R\sin\theta R \diff\theta$
+	\\\includegraphics[width=0.2\linewidth]{shell}
+	\\3. Law of cosines used to simplify integral. $F_g$ is found to be 0.
+	
+}
+\minibox[frame]{
+\minibox[frame]{$B_\lambda$ from $B_\nu$
+	\\Using chain rule, $B_\lambda = B_\nu \cdot \pdv{\nu}{\lambda}$
+	
+}
+\\
+\minibox[frame]{\textbf{Stefan Boltzmann}
+	\\$F_{surf} = \pi \int_0^\infty B_\nu \diff \nu$, use $u(\nu)=\frac{h\nu}{kT}$
+}
+\\
+\minibox[frame]{\textbf{Sun core temp}
+	\\Find P(0) from Hydro equil eqn
+	\\Use $PV=NkT=\frac{M_{core}}{\overline{m}}$
+	\\$T\approx \frac{P_{center}\overline{m}}{\rho_{sun}k}$ 
+}
+\\
+\minibox[frame]{
+	\\\textbf{Radiative Transport:} \\Consider a shell with thickness dr. 
+	\\$f_{shell_{net}}=f_{up}-f_{down}$
+	\\$f_{shell_{net}}=\sigma_{SB}[T^4(r)-T^4(r+\diff r)]$
+	\\Simplified with Taylor expansion:
+	\\$ \frac{L(r)}{4\pi r^2}=\sigma_{SB}[T^4(r) - [T^4 + \dv{T^4}{r}\diff r]]$
+	\\We are talking about how much energy \\a photon can carry (radiative \\transport) therefore $\diff r \equiv l_{mfp-\gamma}$
+	\\$\boxed{\dv{T}{r} = -\frac{1}{4\sigma_{S-B}T^3}\cdot\frac{1}{l_{mfp-\gamma}}\cdot\frac{L}{4\pi r^2}}$
+}
+}
+\minibox[frame]{\textbf{Angular (and regular) Doppler}
+	\\A star with constant $\vec{v}$ releases wave A at $t_1$, then B at $t_2$
+	\\$c_\Delta t$ is, at $t_2$, dist b/w A and where star was at $t_1$.
+	\\$l_{ab}$ is dist b/w A and B at $t_2$
+	\\\includegraphics[width=0.18\linewidth]{../../Downloads/20171004_214728}
+	\includegraphics[width=0.18\linewidth]{../../Downloads/20171004_214740}
+	\\At small $\Delta t, l_{ab}\approx c\Delta t -v\Delta t\cos\theta$
+	\\$\lambda_{obs} = \frac{l_{ab}}{n} \quad n$ (no. of peaks and troughs b/w waves)$ =\frac{c\Delta t}{\lambda_{em}\gamma} $
+	\\$\rightarrow \boxed{\lambda_{obs} = \lambda_{em}\gamma(1-\frac{v}{c}\cos\theta)}$
+	
+	
+}
+\\
+\minibox[frame]{\textbf{Virial Thm}
+	\\
+	S = $\sum_{\alpha}\vec{p}_\alpha \cdot \vec{r}_\alpha \quad \left< \frac{dS}{dt}\right> \equiv \frac{1}{N \, measurements} \sum_{n=0}^{N-1} \frac{dS}{dt}=$
+	\\$\boxed{\frac{1}{T}\int_0^T \frac{dS}{dt} dt= 0 \,as\, T\rightarrow \infty}$
+	$T$: total time of all measurements.
+	\\ $\left< \frac{dS}{dt} \right> = 0 = \left< \sum_\alpha \frac{d\vec{p}_\alpha}{dt}\cdot \vec{r}_\alpha + \vec{p}_\alpha \cdot\frac{d\vec{r}_\alpha}{dt} \right>= \left< \sum_\alpha \vec{F}_\alpha \cdot \vec{r}_\alpha \right> + 2\left<K_{total}\right>
+	$
+	\\$ \left< \frac{dS}{dt} \right> = 0 = \left< \sum_\alpha\left(\sum_{i\neq \alpha} \vec{F}_{i \rightarrow \alpha} \cdot \vec{r}_\alpha\right) \right> + 2\left<K_{total}\right>
+	$
+	\\The inner summation term can be divided up into $\alpha > i$ and \\$\alpha < i$ sums. These are just mirrored, $\therefore$
+\\	$ \left< \frac{dS}{dt} \right> = 0 = \left< \sum_\alpha\left(\sum_{i<\alpha} \vec{F}_{\alpha,i} \cdot (\vec{r}_\alpha-\vec{r}_i)\right) \right> + 2\left<K_{total}\right>
+	$
+	\\
+	$ \left< \frac{dS}{dt} \right> = 0 = \left< \sum_\alpha U_{i\alpha} \right> + 2\left<K_{total}\right>
+	\rightarrow \boxed{\left<U\right> + 2\left<K_{total}\right> =0}
+	$
+}
+\minibox[frame]{
+\minibox[frame]{\textbf{Hydrostatic Equilibrium}
+\\ For cylinder slice of star w/ thickness dr, mass dm,
+\\$F_g=\frac{G\diff m M(<r)}{r^2} $
+\\$F_{up} = AP(r) \quad F_{down} = AP(r-dr)$
+\\$F_{down}+F_g=F_{up}\rightarrow A(P(r)-P(r+\diff r)) = \frac{G(\rho(r) A \diff r) M(<r)}{r^2}$
+\\Cancel out A's, simplify left side to become H.E. eqn.
+}
+\\
+\minibox[frame]{\textbf{Hydrostatic Eq. to Virial Thm}
+\\Multiply both sides of HS eqn by r,\\then integrate from 0 to R wrt r, \\right side is then $U_{grav}$.
+\\Left side becomes $-3\overline{P}V$ (integrating 
+\\P(r) over star V), so $U_{grav}=-3\overline{P}V$.
+\\Using $PV=\frac{2}{3}K$, $U_{grav} +2K = 0$: Virial Thm
+}
+}
+\end{document}

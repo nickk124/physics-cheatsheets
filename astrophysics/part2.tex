@@ -1,0 +1,439 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{float}
+\usepackage{physics}
+\usepackage{minibox}
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\begin{document}
+	\fontsize{6pt}{7pt}\selectfont
+	
+\subsubsection{Star Formation, Black Hole Types, Hawking Radiation}
+\minibox[frame]{\textbf{Jeans Mass} 
+	\\The first criterion for gas cloud collapse:
+	\\ $ M > \frac{5R}{G}\frac{k_BT}{\overline{m}}\equiv M_\text{jeans}$
+	\\($\overline{m}$ is avg. gas particle mass, $R$ is cloud radius)
+	\\$R_\text{jeans}=\left(\frac{15k_bT}{4\pi G \overline{m}\rho}\right)^{1/2}=\left(\frac{3M_\text{jeans}}{4\pi\rho}\right)^{1/3}$
+	\\\textbf{Fragmentation}
+	\\For some gas cloud above $M_\text{j}$, as cloud collapses,
+	\\$\rho \uparrow$, so $M_\text{j} \downarrow$, so now regions of the cloud have $M>M_\text{j}$
+	\\This cycle repeats for smaller and smaller subregions,
+	\\\textbf{Only if T is constant}
+	\\Once $\rho$ increases enough, $l_\text{mfp} \downarrow$: cloud can't cool, then
+	\\$T\uparrow$ means $M_j \uparrow$; fragmentation stops
+	\\this is one reason why stars form in groups
+	\\\minibox[frame]{
+		\textbf{Star Birth and Getting on the Main Sequence}
+		\\1) Dark cloud cores, then gravitational collapse
+		\\2) Clump of gas becomes protostar, then T-Tauri
+		\\3a) Pre MS Star: If massive enough, collapses to begin fusion
+		\\3b) If not massive enough, stays as a brown dwarf
+		\\the more massive the star, the faster it forms
+		\\ stars can take 10s of thous to 10s of mil yrs to land on MS}
+
+
+
+
+
+}
+\minibox[frame]{\textbf{Star Clusters}
+\\\textbf{Open Clusters}: (stellar nurseries): mostly MS stars, 
+\\drift apart as supernovae start popping off	
+\\\textbf{Globular Clusters}: Dense, bound for life
+\\rare star-star collisions thought to form blue stragglers
+\\\textbf{Metallicity:} What the star formed from
+\\\minibox[frame]{
+	\textbf{Gas Cooling Mechanisms:}
+	\\- Dissociation of molecular H, - Ionization of Hydrogen
+	\\- Hydrogen recombination (Balmer and lower E $\gamma$ 
+	\\can escape (not too high E that would just 
+	\\be absorbed by surrounding H)
+	\\- Metals: molecular lines, free emission
+	\\The more metallic, the better at cooling, the more 
+	\\fragmentation, smaller stars form
+	\\Diff cooling mechanisms happen at diff temps:
+	\\\textbf{From low T to high, in order}:
+	\\molecular line emission, low ionization metals, 
+	\\H \& He recomb., highly ionized metals, \\free-free (deceleration of a charged particle deflected by 
+	\\other charged particle; loses KE as photon)
+
+	
+	
+	
+}
+}
+\minibox[frame]{\textbf{Types of Black Holes}
+		\\\textbf{Stellar Mass}: form by core collapse SN, NS mass transfers 
+		\\and mergers ($\sim10 M_\odot$)
+		\\\textbf{Supermassive}: formed by merging, and acreetion, found in 
+		\\centers of galalxies and grow over cosmic time (mils of $M_\odot$)
+		\\\textbf{Intermediate}: 1000's of $M_\odot$, tentative evidence
+		\\\textbf{Primordial}: no clear evidence
+		\\\minibox[frame]{\textbf{Hawking Radiation}
+			\\in empty space, particle-antiparticle pairs
+			\\ exist for instant before annihilating into energy
+			\\near event horizon, one can fall in, as the other escapes, 
+			\\but energy debt must be paid, so BH loses mass.
+			\\Therefore, BHs have temps and BB spectrum:
+			\\$T = 6.2\times 10^{-8} \text{ K} \times \frac{M_\odot}{M}$
+			\\Black holes evaporate if hotter than background CMB $T$: \\($M<0.008M_\text{earth}$)
+		
+	}
+	\\\textbf{IMPORTANT:} $M(<r) = \int_0^r\rho(r')\diff V$, $\diff V = 4\pi r'^2\diff r'$ 
+	\\see interstellar gas visibly with:
+	\\diffuse cool gas: reflection/scattering
+	\\dense cool gas: extinction/reddening (objects appear redder)
+	\\hot gas: emits lines (red: H$\alpha$)
+	}
+
+\subsubsection{Relativity and Accretion Disks}
+\minibox[frame]{\textbf{Einstein's Postulates (1915 (GR))}
+\\1) Physics is the same in all ref frames that move at a const vel
+\\1b) The speed of light in vacuum is same in all ref frames
+\\2) \textbf{A freefall frame in a grav field is indist. from an iner. frame in no grav. field}
+\\ 2b) An accelerating frame is indist. from a frame at rest in a grav field with g=a
+
+\\\textbf{Spacetime Diagrams}
+\\\minibox[]{
+\\\includegraphics[width=0.2\linewidth]{../../Pictures/Screenshots/spacetimed}\\units: s and ls
+}
+\minibox[frame]{
+\minibox[frame]{\textbf{Spacetime Interval}
+	\\All observers agree on $\Delta s$
+	\\$(\Delta s)^2 = -(c\Delta t)^2 + (\Delta x^2 + \Delta y^2 + \Delta z^2)$ 
+	\\\textbf{Proper Time}: $\tau$: time between 2 events \\as seen by obs who sees them happen 
+	\\in same place
+	\\$(\Delta s)^2 < 0$: timelike
+	\\$(\Delta s)^2 = 0$: null, or lightlike
+	\\$(\Delta s)^2 > 0$: spacelike
+}
+\\\minibox[frame]{\textbf{Gravitational Redshift (less rigorous)}
+\\$z=\frac{\Delta\lambda}{\lambda_\text{em}}=\frac{-v}{c}=\frac{-g\Delta t}{c}=\frac{\Delta\lambda}{\lambda_\text{em}} = \frac{gh}{c^2}$
+\\h is d traveled by $\gamma$
+\\according to outside observer
+\\redshifted as it exits grav well
+
+}
+}
+}
+\minibox[frame]{\textbf{SC metric:}
+	$\diff s^2 = -c^2\diff t^2\left(1-\frac{2GM}{rc^2}\right)+\diff r^2\left(1-\frac{2GM}{rc^2}\right)^{-1}+r^2\diff\theta^2+r^2\sin^2\theta\diff\phi^2$
+	\\\textbf{In flat spacetime: }$\diff s^2 = -c^2\diff t^2+\diff r^2+r^2\diff\theta^2+r^2\sin^2\theta\diff\phi^2$
+	\\\textbf{Gravitational Time Dilation:} $\diff\tau=\diff t\sqrt{1-\frac{2GM}{rc^2}}$ \\Where $\diff t$ is time seen by somebody infinitely far away.
+	\\\textbf{Grav Redshift:} $\lambda_\text{obs}=\lambda_\text{em}\left(1-\frac{2GM}{rc^2}\right)^{-1/2}\quad\frac{\Delta\lambda}{\lambda_\text{em}}=\frac{\sqrt{1-\frac{2GM}{r_2c^2}}}{\sqrt{1-\frac{2GM}{r_1c^2}}}-1$
+	\\\textbf{SC Radius} (event hori): $R_s=\frac{2GM}{c^2}$, lowest possible STABLE orbit: $r>\frac{3GM}{c^2}$
+	\\\minibox[frame]{\textbf{Accretion Disks}
+		\\From MFM, as $M(<r)\simeq M_{BH}$: $v_\text{rot} \simeq \sqrt{GM/r}$
+		\\For ring of disk: $T =r^{-3/4}\times \left(\frac{GM\dv{M}{t}}{8\pi\sigma_{SB}}\right)^{1/4}$ Where $M$ is BH Mass
+		\\Lotal disk luminosity: $L_\text{tot}\simeq \frac{1}{2}\frac{GM\dv{M}{t}}{r_\text{inner}}$ 
+		\\Where $r_\text{inner}$ is the innermost stable orbit ($3R_S$ for BH)
+		\\efficiency: how much of M going in is being radiated away: $\eta = \frac{L_\text{tot}}{\dv{M}{t}c^2} = \frac{1}{2}\frac{GM}{r_\text{inner}c^2}$
+		\\\textbf{Eddington Luminosity Limit:} $L_\text{tot, max}= \frac{4\pi cGMm_\text{proton}}{\sigma_T}$
+		\\$\sigma_T = 6.65\times 10^{-29}\text{ m}^2$, $m_p = 1.673\times10^{-27}$ kg 
+		
+	}
+	
+	
+}
+\subsubsection{Gravitational Lensing and Finding Planets}
+\minibox[frame]{\minibox[frame]{\textbf{For top right situation (aligned)}:
+		\\$\alpha = \frac{4GM}{c^2b}$ (Where $b$ is dist of closest approach)
+		\\$\alpha D_{ls} = \theta D_{os}$
+		\\angular disk radius: $\theta_E = \left(\frac{4GM}{c^2}\frac{D_\text{ls}}{D_{ol}D_{os}}\right)^{1/2}$ 
+		\\Maybe: $\theta_E = 10^{-4}\text{ as}\left(\frac{M}{M_\odot}\right)^{1/2}\times\left(\frac{D_{ol}}{10\text{ kpc}}\right)^{1/2}$
+		\\\textbf{For bottom right situation (nonaligned)}:
+		\\$D_{os}\beta+D_{is}\alpha=D_{os}\theta \rightarrow \theta^2-\beta\theta-\theta_E^2=0$
+		\\$\theta_{\pm}=\frac{1}{2}\left[\beta\pm(\beta^2+4\theta_E^2)^{1/2}\right]$
+		\\Lensing: brightness$\uparrow$; more light focused on us
+		\\\textbf{Magnification (rightmost pic)}:
+		\\Relative increase in angular size of each image (+ and -):
+		\\$a_{\pm} = \frac{\text{img angular size}}{\text{source angular size}} = \frac{\theta_{\pm}\diff\theta_{\pm}}{\beta\diff\beta}=\frac{\theta_{\pm}}{2\beta}\left[1\pm\frac{\beta}{(\beta^2+4\theta_E^2)^{1/2}}\right]$
+		\\$a_\text{tot} = a_+ + a_- = \frac{u^2 +2}{u(u^2+4)^{1/2}}$, where $u = \beta/\theta_E$
+		\\For small $u$, $a_\text{tot} \simeq 1/u = \theta_E/\beta\qquad \frac{\tau_\text{star}}{\tau_\text{planet}}\simeq\sqrt{\frac{M_\text{star}}{M_\text{planet}}}$
+		\\Duration of lensing event: $\tau = \frac{\theta_ED_{ol}}{v}\propto M_\text{planet}$ where $v$ is 
+		\\$v$ b/w source and lens (planet) in the plane of the lens
+	
+		
+		
+		
+	}
+	\minibox[frame]{\\\includegraphics[width=0.15\linewidth]{../../Pictures/Screenshots/gravlensing}
+	
+}
+\minibox[frame]{\includegraphics[width=0.15\linewidth]{../../Pictures/Screenshots/gravmagnification}
+}
+}
+\minibox[frame]{
+	\textbf{1) Microlensing:} find rockey planets \\w/ long period: one time only
+	\\\textbf{2) Radial Velocity of star:} best finding massive plans 
+	\\in close orbits (hot jupiters) (didn't form that close)
+	\\\includegraphics[width=0.13\linewidth]{"../../Pictures/Camera Roll/WIN_20171118_19_19_36_Pro"}
+	\\$M_\text{planet}\sin i\approx \left(\frac{\tau}{2\pi G}\right)^{1/3}\times|v_\text{1, obs}|M_\text{star}$
+	\\Where $\tau$ is orbital period, $i$ is shown in pic
+	\\\textbf{3) Transit Detection:}$\frac{\Delta f}{f}=\left(\frac{r_\text{planet}}{r_\text{star}}\right)^2$, $P=\frac{r_*+r_p}{d_{(p,*)}}$ 
+	\\\textbf{4) Direct Imaging}: 
+	\\Only possible for big, young planets, far away from star
+
+
+}
+\subsubsection{Galaxies}
+\minibox[frame]{\textbf{General Galaxy Stuff}$\qquad \rho\propto 1/r^2$
+	\\From Virial Thm, for ell. gals and gal clusters:
+	\\$M = \frac{5\sigma_\text{LOS}^2R}{G}\qquad \sigma_\text{LOS}^2=\sum_N\frac{1}{N}(v_i-\overline{v})^2$
+	\\\minibox[frame]{\\\textbf{Active Galactic Nuclei}
+		\\Size of the solar system
+		\\gas moving relativistically
+		\\center has Supermassive Black Hole
+		\\Emit mostly x-ray and radio (unlike stars)
+		\\Eddington Luminosity applies
+		\\AGN Variability: $R<c\Delta t \simeq 37.5$ AU
+		\\\textbf{AGN Jets}: extend up to one Mpc
+		\\emits at all wavelengths, peaks in IR, UV
+		\\\textbf{Types:} 
+		\\Seyfert Galaxies: $10^8-10^{11}$ $L_\odot$
+		\\Quasars: $3\times 10^{10}-4.3\times 10^{14}$ $L_\odot$
+		\\\textbf{Some Non-AGN galaxies have SMBHs} \\(non-accreting) But not all gals has BHs
+		\\SMBH mass correlates to central bulge mass \\(but SMBH does not effect gal structure)
+		\\$\uparrow$ due to merging galaxies merging SMBHs too
+		
+	}
+}
+\minibox[frame]{\textbf{Isolated Galaxy Formation}
+\\(Galaxies don't really form in isolation)
+\\1) 1st stars form spheroid: Es, S0s 
+\\tend to have old stellar populations
+\\2) Gas comes in, forms disk as it is 
+\\the config of lowest energy that maintains \\$\vec{L}$. New stars form from disk gas
+\\\textbf{Galactic Mergers}
+\\\textbf{Steps:} 1) random dispersion of stars
+\\sphereoids develop (violent relaxation)
+\\Dark Matter increases ``target size''
+\\Dynamical Friction helps galaxies merge.
+\\\textbf{More dyn fric if:} slower relative 
+\\motion, greater satellite mass, larger 
+\\DM halos (mergers start when halos touch)
+\\Gas flows inward due to tidal forces, new 
+\\stars form in huge burst due to replenished 
+\\gas, now a lot of stars in center
+\\\textbf{Most star form. was 10-11 Gyr ago}
+\\\textbf{Galaxy Clusters:} filled w hot gas,
+\\gravitational lensing implies mass, all
+\\indicates lots of DM. mostly elliptical gal
+\\because of many mergers
+}
+\minibox[frame]{\textbf{Classifying Galaxies: Hubble ``Sequence''}
+	\\\includegraphics[width=0.37\linewidth]{../../Pictures/Screenshots/hubblecycle}
+	\\\textbf{Left to Right:} Gas infall \& Outer disk growth, less spheroid, 
+	\\more thin disk, more rotation, more cold gas \& young stars, $\therefore$ bluer
+	\\\textbf{Right to Left:}Galaxy interactions (bulge/inner disk growth)
+	\\Ellipticals: Red and Dead; Irr: Most common, most gas vs. stars
+	\\Spiral: Most star formation (blue light means young stars)
+	\\Ellipticals: ``early type'' (misnomer)
+
+}
+\minibox[frame]{\includegraphics[width=0.1\linewidth]{../../Pictures/Screenshots/dynamicalfriction}
+	
+	
+	
+}
+\subsubsection{Cosmology, the Big Bang, Dark Matter, and more Quasars}
+\minibox[frame]{
+\minibox[frame]{\textbf{More on Quasars}
+	\\1) Quasars are SMBH perpetually at 
+	\\Edd. Lum. 2) Quasars are not near 
+	\\MW b/c they were only common 
+	\\during first few Gyr after the BB
+	\\because they require a lot of 
+	\\gas \& merger activity.
+	\\3) Now, gas is mostly used up and 
+	\\mergers are less common
+	\\4) Not all are strong radio sources
+}
+\\\minibox[frame]{\textbf{Star Cosmology Players}:
+	\\Hubble (extra-gal distances)
+	\\Leavitt (Cephied Period-L relation)
+	\\Slipher (Redshifts of ``spiral nebulae'')
+}
+}
+\minibox[frame]{\textbf{The Evolving Universe}
+	\\Hubble's Law: $v\simeq H_0 d \qquad H_0\simeq 70$ km/(s Mpc)
+	\\ $z = \frac{\text{dist today}}{\text{dist at emission}}-1 = \frac{\Delta\lambda}{\lambda}\simeq\frac{v}{c}$ \\\textbf{ABOVE ARE ONLY VIABLE AT SMALL z}
+	\\$d=a(t)x$ Where $d$ is actual distance b/w two things, 
+	\\$x$ is their constant comoving distance 
+	\\$H = \frac{\dot{a}(t)}{a(t)}\qquad H_0 \text{ is evaluated at $t_0$, today; $a(t_0) = 1$}$
+	\\So, as $H_0$ is always increasing, so is $\dot{a}(t_0)$. (a-DOT)
+	\\\textbf{Cosmol. Redshift:} \\$\frac{c\delta t_{obs}}{c\delta t_{em}}=\frac{a(t_\text{obs})}{a(t_\text{em})}=\frac{\lambda_\text{obs}}{\lambda_\text{em}}=1+z>1$
+	\\\textbf{a(t)} is the const. of proportionality b/w comoving
+	\\dists \& actual proper dists.
+	\\If some $a$ is 5 at some time, that means the object 
+	\\was 1/5 the distance it is today back then
+	\\most star formation was 10-11 Gyr ago
+}
+\minibox[frame]{\textbf{The Geometry of the Universe}
+	\\Observations \& Cosmo Principle imply the universe is homogenous and isotropic 
+	\\(no special positions are directions)
+	\\\textbf{FRW Metric:} $\diff s^2 = -c^2\diff t^2 + a^2(t)[\text{geometry of space}]$
+	\\$\diff s^2= -c^2\diff t^2 + a^2(t)[\diff x^2 + \diff y^2 + \diff z^2]$ \textbf{ Where dx, dy, dz are all comoving dist.}
+	\\\textbf{Spherical Coords:} $\diff s^2 = -c^2\diff t^2 + a^2(t)[\diff r^2 + r^2 \sin ^2 \theta \diff \phi^2 + r^2\diff \theta^2]$
+	\\\minibox[frame]{\textbf{Possible Universe Geometries}
+		\\$\rho_\text{crit}$ is the total energy density needed for the universe to be flat
+		\\\textbf{Closed (Spherical):} $\rho_\text{tot}>\rho_\text{crit}$, parallel lines cross, triangle angles $>180^\circ$, 
+		\\will collapse: big crunch (this could be altered by DE though)
+		\\\textbf{Open (Hyperbolic):} $\rho_\text{tot} < \rho_\text{crit}$, parallel lines diverge, triangle angle $<180^\circ$,
+		\\will expand forerver (not altered by DE)
+		\\\textbf{Flat: }$\rho_\text{tot}=\rho_\text{crit}$, parallel lines stay parallel, triangle angles = $180^\circ$,
+		\\will expand forever, but at slower and slower rate (altered by DE)
+		\\Evidence points to this geometry
+		\\Today: $\rho_\text{matter} = 0.3\rho_\text{crit}$
+		
+	}
+	
+}
+\minibox[frame]{\textbf{The Friedmann Equation (In a flat universe)}
+	\\$\boxed{\left(\frac{\dot{a}}{a}\right)^2\equiv H^2=\frac{8\pi G}{3}\rho_\text{tot}}$, $\rho_\text{tot}\equiv\rho_\text{crit}$ (either/both 
+	\\are not fixed with time, evaluated at a chosen $H$)
+	\\$\rho_\text{crit,0}$ is simply evaluated at today ($t_0$,) $H_0$. 
+	\\$\rho_\text{crit,0} = 9\times 10^{-27} kg/m^3$ $\Omega_i \equiv \frac{\rho_\text{i,0}}{\rho_\text{crit}}$ 
+	\\for $i \in \{\text{matter, radiation, dark energy} (\Lambda) \}$ 
+	\\So $\Omega_i$ is ALWAYS evaluated at today
+	\\today, $\Omega_\text{m} \simeq 0.3, \Omega_\text{de} \simeq 0.7, \Omega_\text{r} \simeq 9\times 10^{-5}$
+	\\\textbf{Second Friedmann Equation}: (double dot a in numer.)
+	\\$\frac{\ddot{a}}{a}=-\frac{4\pi G}{3}\left(\rho_\text{tot}+\frac{3P}{c^2}\right)$ Where $P$ is pressure
+	\\$\rho_\text{m} \propto \frac{1}{a^3}$, $\rho_\text{r}\propto T^4$, $T\propto \frac{1}{a}\propto(1+z)$
+	\\\textbf{Density and More}
+	\\General Case: $\rho \propto a^{-3(1+\omega)}$, $\omega_m=0,\omega_r=\frac{1}{3},\omega_{de}=-1$
+	\\$\omega$ is the eqn. of state parameter: $\omega = \frac{P}{c^2\rho}$
+	\\From this, we find: $\rho_\text{de}\simeq$ constant, 
+	\\$\rho_m=\rho_{(m,0)}a^{-3}\rightarrow\rho_m\propto a^{-3}$
+	\\$\rho_r=\rho_{(r,0)}a^{-4}\rightarrow \rho_r\propto a^{-4}$
+	\\From homework, we found: \\$H(t)=H_0\sqrt{\Omega_ma(t)^{-3}+\Omega_ra(t)^{-4}+\Omega_\text{de}}$
+	\\\textbf{Calculating Age of Universe}:
+	\\$t_0=\int\limits_0^{a(t_0)}\frac{\diff a'}{\dot{a}'}=\int\limits_0^1\frac{\diff a'}{a'H(a')}$ 
+	\\For radiation only universe: $H=H_0a^{-2}$
+	\\\textbf{Calculating Size of (Observable) Universe:}
+	\\(derived from FRW metric for some $\gamma$ traveling to now)
+	\\radius=$c\int\limits_{t_{em}}^{t_0}\frac{\diff t'}{a}=c\int\limits_{a_{em}}^1\frac{\diff a'}{a'^2H(a')}$
+	\\ Where ' just indicates dummy variables
+}
+\minibox[frame]{
+\minibox[frame]{\textbf{The Origins of Matter:}
+	\\$\gamma$'s $\leftrightarrow$ $e^+, e^-$ if $E_\gamma=h\nu>E_{e^+/e^-}=mc^2$
+	\\ $e^+ and e^-$ continuously annihilate
+	\\Equilibrium stops when radiation too cold 
+	\\but annihilation contiues, and fast
+	\\\textbf{Freeze-out:} annihilations stop b/c the 
+	\\partics. are dilute enough; b/c so few partics.\\ left, and b/c the expans. of the universe
+	\\\textbf{Matter-Antimatter Asymmetry}
+	\\Most likely because of some unexplained \\matter-antimatter asymmetry (like 1,000,000 \\vs 1,000,001)
+	\\\textbf{Dark Matter Origins:}
+	\\The freeze-out process predict the observed
+	\\DM density if DM particles interact via Weak F.
+	\\\textbf{IF} DM was produced by freeze-out,
+	\\(only possible if it has antiparticles,) then
+	\\there should be equal amts of DM and 
+	\\DantiM If both DM and M freeze out, 
+	\\they won't necessarily have same density \\today, as freezeout is dependent 
+	\\on MFP of particles annihilating
+}
+\\\minibox[frame]{\textbf{Big Bang Nucleosynthesis}
+	\\NOT full atoms, just nuclei
+	\\$T = 10^9$ K$\qquad 2p^+ + 2n^0 \rightarrow 2D^2\rightarrow \text{He}^4$
+	\\$t_0=10$ s, lasted about 200 s
+	\\Universe was hot and dense enough to 
+	\\trigger this fusion, but cool enough:
+	\\$\overline{E}_\gamma=k_bT=0.08$ MeV, $E_\text{deuterium}=-2.22 eV$
+	\\Universe had to be cool enough for so not \\even one in a billion photons (due to \\freeze-out) would have enough energy to \\destroy deuterium D
+	\\That fusion only possible with free neutrons, \\which decay quickly, so doesn't last long; 
+	\\this is why no elements heavier than Be
+	\\formed; window was too short before too cool
+	\\observations of primordial He and D
+	\\show that universe is only 4\% atoms
+}
+}
+\minibox[frame]{
+	\minibox[frame]{\textbf{The Cosmic Microwave Background}
+		\\He, $p^+$, $e^-$ became atoms
+		\\\textbf{Surface of Last Scatter:} 380,000 yrs after BB,
+		\\when T = 3000 K, hydrogen atoms formed,
+		\\after which photons could travel freely:
+		\\$l_{mfp}=\left(\frac{n_{e}}{n_{e\text{ free}}}\right)\times\frac{7\times10^{28}\text{ m}}{(1+z)^3}$
+		\\Because more of the free electrons joined nuclei 
+		\\(low enough energy free $\gamma$ to not ionize atoms)
+		\\so now universe was transparent from then on
+		\\$l_{universe}\approx\frac{c}{H}$
+		\\Our motion actually redshifts \& blueshifts the CMB
+		\\CMB is the perfect BB radiator, T=2.725
+		\\confirms hot big bang. there are very tine mK flucs.
+		\\for in this
+	}
+	\\\textbf{Dark Matter Candidates}
+	\\\textbf{WIMPS} are leading candidate; leading \\candidate for WIMP: SUSY fermion partners of 
+	\\Weak force carriers (partners of W, 
+	\\Z, Higgs bosons). Other proposals 
+	\\struggle to explain DM's current density
+	\\\textbf{MACHOS}: They cant be DM (at least \\more than 10\% of it). Looking to 
+	\\the DM halo, MACHOS would produce 
+	\\much more gravitational microlensing 
+	\\than is actually seen, if it was all MACHOS.
+	\\\textbf{Neutrinos:} ruled out because they're \\too hot: the large scale structure that \\neutrionis would make is not what is observed.
+	\\\textbf{Ultra-cold H2 globules:} DM can't be made
+	\\out of regular matter
+	\\\textbf{MOND:} Can explain some things, 
+	\\but not everything.
+	\\Still continues to not die.
+	\\$1^\circ$ disks in CMB, casually separated by 
+	\\photon path since BB; yet, still all have
+	\\almost exactly same temp
+} 
+\subsubsection{Misc Info, Derivations}
+\minibox[frame]{\textbf{Misc Info}
+\\\textbf{HII Regions:} when O, B stars form, they emit radiation 
+\\that can ionize surrounding gas, making HII region
+\\$\rho/n=\overline{m}\qquad g_{surf}\simeq\frac{GM}{R^2}$
+\\Press. broad comparing 2 stars: $\frac{\Delta \lambda_1}{\Delta \lambda_2}=\frac{n_1}{n_2}=\frac{P_1/kT_1}{P_2/kT_2}$
+\\$N=M/\overline{m}$, Metallicity is frac. that's not H or He
+}
+\minibox[frame]{\textbf{Roche Lobe, Tidal:}
+	\\$\frac{M_1}{(a-R_L)^2}-\frac{M_2}{R_L^2}=\frac{M_1}{a^2}-\frac{R_L(M_1+M_2)}{a^3}$
+	\\$R_L\simeq a\left(\frac{M_2}{3M_1}\right)^{1/3}\qquad F_\text{tide}\simeq\frac{2GMmh}{r^3}$
+\\\textbf{Jean's Mass Deriv}:
+	\\From V thm: collapse if $U>2K$: $\frac{3GM^2}{5R}>2\times\frac{3Mk_bT}{2\overline{m}}$
+\\\textbf{Accretion Disk Temp}:
+\\For falling $\diff m$: $\Delta U_\text{grav}=\frac{-GM\diff m}{r^2}\diff r$
+\\From MFM: $\Delta KE=\Delta E_{thermal}$
+\\$\frac{1}{2}\diff m\left(\sqrt{\frac{GM}{r}}\right)^2-\frac{1}{2}\diff m\left(\sqrt{\frac{GM}{r+\diff r}}\right)^2=\frac{1}{2}\frac{GM\diff m}{r^2}\diff r$
+\\$\frac{\Delta E_\text{thermal}}{\diff t}=\frac{1}{2}\frac{GM\diff m \diff r}{r^2 \diff t}$
+\\$\frac{\Delta E_\text{thermal}}{\diff t}=L_\text{ring}=\sigma_{SB}T^4(2\pi r\diff r)\times 2$
+\\Solve these for each other to get answer.
+\\\textbf{Total Disk Luminosity:}
+\\$L_\text{tot}=\int_{r_\text{inner}}^{r_\text{outer}}2(2\pi r \diff r)\sigma_{SB}T^4$
+\\\textbf{Eddington Luminosity:}
+\\Consider some $e^-$ trying to fall into object.
+\\There's pt where rad. press overcomes grav. attrac on $e^-$
+\\$n_\gamma=\frac{L_\nu}{4\pi r^2 c h \nu}$
+\\Scattering rate of $e^-$ = $n_\gamma\sigma_Tc$ Each scatter: $\Delta p_e=\Delta p_\gamma = \frac{h\nu}{c}$
+\\$F_\gamma =\dv{p}{t}$, $F_{\gamma_{tot}}=\frac{L_{tot}\sigma_T}{2\pi r^2 c}$; $F_\gamma>\frac{GMm_p}{r^2}$
+\\($m_p$ because electrons bound to protons)
+
+
+	
+	
+	
+	
+}
+\minibox[frame]{\textbf{Cosmo Redshift Deriv:}
+	\\For photon going towards Earth (FRW Metric):
+	\\$c^2\diff t^2 = a^2 \diff r^2\rightarrow \diff r =\pm c\frac{\diff t}{a}$
+	\\$\int_{r_{gal}}^{r=0}\diff r = \pm c\int_{t_{em}}^{t_{obs}}\frac{\diff t}{a}= c \int_{t_{em}+\delta t_{em}}^{t_{obs}+\delta t_{obs}}$
+	\\Double taylor expand on $t_{em}$ and $t_{obs}$
+	\\$r_{gal} = c\int_{t_{em}}^{t_{obs}}\frac{\diff t}{a} + \left(\frac{-c}{a}\right)_{t_{em}}\delta t_{em} + \left(\frac{c}{a}\right)_{t_{obs}}\delta t_{obs}$
+	\\$0 = \frac{-c}{a_{em}}\delta t_{em} + \frac{c}{a_{obs}}\delta t_{obs}$
+	\\\textbf{densities:}
+	\\$\dv{\rho}{t}=\frac{3}{8\pi G}\left(2\frac{\ddot{a}}{a^2}-2\frac{\dot{a}^2}{a^3}\right)=-3H(\rho+\frac{P}{c^2})=-3H(1+\omega)\rho$
+	
+	
+}
+\end{document}
