@@ -1,0 +1,460 @@
+\documentclass[12pt]{article}
+\usepackage[margin=0in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{float}
+\usepackage{physics}
+\usepackage{minibox}
+%\usepackage{background}
+
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand{\normal}{\hat{\mathbf{n}}}
+\newcommand{\unit}[1]{\hat{\mathbf{#1}}}
+\newcommand{\chris}[3]{\Gamma_{#1#2}^{#3}}
+\newcommand{\stint}{\int\frac{\diff^3 p}{(2\pi)^3}}
+\newcommand{\Dd}{\frac{\text{D}f}{\diff t}}
+\newcommand{\cs}{\left<\sigma v\right>}
+\newcommand{\ve}{\varepsilon}
+\newcommand{\evalat}[1]{\bigg\rvert_{#1}}
+\newcommand{\Dv}{\frac{\text{D} f}{\diff t}}
+
+\begin{document}
+\fontsize{8.0pt}{8.0pt}\selectfont
+\hspace{-0.5cm}
+\minibox[frame,t]{
+	\textbf{Basics} 
+	\\$H_0=100h \quad z=\frac{\Delta \lambda}{\lambda}\simeq\frac{v}{c}$
+	\\$\frac{\lambda_{obs}}{\lambda_{em}}=\frac{\sqrt{1+v/c}}{\sqrt{1-v/c}}=1+z \quad \vec{v}\simeq H_0\vec{d}$
+	\\$\vec{d}=a(t)\vec{x} \quad H=\frac{\dot{a}}{a}  \quad \Omega_i=\frac{\rho_{i,0}}{\rho_c}$
+	\\\textbf{Metrics and Tensors}
+	\\ $\diff\ell^2\equiv d_{phys}=a^2(t)[\diff^3\vec{x}^2]$ (flat)
+	\\closed: sphere, $k=1$
+	\\curved: $\diff\ell^2=\frac{a^2}{a_0^2}[\diff^3\vec{x}^2+k\diff u^2]$
+	\\$k(x^2+y^2+z^2)+u^2=R_c^2$
+	\\$\diff\ell^2=\frac{a^2}{a_0^2}[\frac{\diff r^2}{1-k(r/R_c)^2}+r^2\diff\Omega^2]$
+	\\$\diff\Omega^2=\diff\theta^2+\sin^2\theta\diff\phi^2 \quad \tilde{r}\equiv r/R_c$
+	\\$\diff\chi\equiv\frac{\diff\tilde{r}}{\sqrt{1-k\tilde{r}^2}} \quad \diff s^2=-\diff t^2 + \diff\ell^2$
+	\\$\chi\equiv\arcsin(h)\tilde{r}, k=(-)1 \quad \nabla_\mu  g_{\alpha\beta}=0$
+	\\$\diff s^2=-\diff t^2+\frac{a^2}{a_0^2}[\frac{\diff r^2}{1-k(r/R_c)^2} + r^2\diff\Omega^2]$
+	\\$\frac{\lambda_{obs}}{\lambda_{em}}=\frac{a(t_{obs})}{a(t_{em})}\equiv 1+z \quad x^\mu=(t,r,\theta,\phi)$
+	\\$\diff s^2=g_{\mu\nu}\diff x^\mu \diff x^\nu\ \quad$diag: $g^{\mu\nu}=1/g_{\mu\nu}$
+	\\$x^\alpha\rightarrow\hat{x}^\mu: \hat{T}_\nu^\mu=\pdv{\hat{x}^\mu}{x^\alpha}\pdv{x^\beta}{\hat{x}^\nu}T_\beta^\alpha \quad V_\alpha=\pdv{S}{x^\alpha}$% \quad \hat{V}^\mu=\pdv{\hat{x}^\mu}{x^\alpha}V^\alpha$
+	\\$\nabla_\mu T_\beta^\alpha=\partial_\mu T_\beta^\alpha +\Gamma_{\mu\lambda}^\alpha T_\beta^\lambda-\Gamma_{\mu\beta}^\lambda T_\lambda^\alpha$
+	\\$\Gamma_{\alpha\beta}^\sigma=\frac{1}{2}g^{\sigma\rho}(\partial_\alpha g_{\beta\rho}+\partial_\beta g_{\alpha\rho}-\partial_\rho g_{\alpha\beta})$
+	\\\textbf{Geodesics and Curvature}
+	\\$P^\mu\equiv\pdv{x^\mu}{\lambda} \quad \pdv[2]{x^\alpha}{\lambda}+\chris{\mu}{\beta}{\alpha}P^\beta P^\mu=0$
+	\\$\diff s \equiv \sqrt{\abs{g_{\mu\nu}\diff x^\mu \diff x^\nu}} \quad U^\alpha\equiv\dv{x^\alpha}{s}$
+	\\$=(1,0,0,0)$ for local flat frame.
+	\\$U^\alpha U_\alpha = -1 \quad P^\alpha=m U^\alpha$ (massive)
+	\\$P^\mu P_\mu=-m^2$ (ms) $P^\mu P_\mu=0$ (msls)
+	\\$E\equiv-P_\alpha U^\alpha_{obs}$ usually $U_{obs}^\alpha = (1,0,0,0)$
+	\\$\Rightarrow E=P^0 \quad E^2-m^2=g_{ij}P^iP^j\equiv p^2$
+	\\$v^i_{phys}=a\dv{x^i}{t} \quad R_{\mu\nu}\equiv R^\alpha_{\mu\alpha\nu} \quad R^\alpha_{\mu\beta\nu}\equiv$
+	\\$\partial_\beta\chris{\mu}{\nu}{\alpha} - \partial_\nu\chris{\mu}{\beta}{\alpha}+\chris{\beta}{\lambda}{\alpha}\chris{\mu}{\nu}{\lambda}-\chris{\nu}{\lambda}{\alpha}\chris{\mu}{\beta}{\lambda}$
+	\\$R=g^{\mu\nu}R_{\mu\nu} \quad G_{\mu\nu}=R_{\mu\nu}-\frac{1}{2}g_{\mu\nu}R$
+	\\$\nabla_\mu G^{\mu\nu}=0 \quad T^{\mu\nu}=\frac{\Delta P^\mu}{(\Delta x)^3} \quad \nabla_\mu T^{\mu\nu}=0 $
+	\\$\equiv$flux of $P^\mu$ across a surface of const $x^\nu$
+	\\$T^{\mu\nu}=\text{diag}(\rho,P,P,P)$ (perfect, flat FRW)
+	\\$T^{\mu\nu}=Pg^{\mu\nu}+(\rho+P)U^\mu U^\nu$
+	\\$T_\nu^\mu=\text{diag}(-\rho, P, P,P) \quad G_{\mu\nu}=8\pi GT_{\mu\nu}$
+	\\\textbf{Content and Distances}
+	\\$H^2=\frac{8\pi G}{3}\rho -\frac{k}{R_c^2a^2} \quad \frac{\ddot{a}}{a}=-\frac{4\pi G}{3}(\rho +3 P)$
+	\\$\rho_c={3H_0^2}/{8\pi G} \quad \dot{\rho}+3H(1+\omega)\rho=0$
+	\\$a=1/(1+z)  \quad P=\omega\rho \quad H(a)=$
+	\\$H_0\sqrt{\Omega_\Lambda+\Omega_ma^{-3}+\Omega_ra^{-4}+\Omega_ka^{-2}}$
+	\\or DE term is $\Omega_\Lambda a^{-3(1+w)}$
+	\\$t=\int_{a_{em}}^{a_{obs}}\frac{\diff a'}{a'H(a')} \quad\chi=\int_{a_{em}}^{a_{obs}}\frac{\diff a'}{a'^2H(a')}$
+	\\$\chi=r$ ($k=0$) 
+	\\$\chi=R_c\arcsin(h)[r/R_c]$ ($k=-1$)
+	\\$F_{obs}=\frac{L_{em}}{4\pi d_L^2} \quad \theta_{obs}=\frac{r_{ruler}}{r_{dist}}=\frac{R_{phys}}{d_A}$
+	\\$d_L=(1+z)r \quad d_A=(1+z)^{-1}r$
+	\\\textbf{Particle Statistics \& Early Universe}
+	\\$N=\int\diff^3x n(\vec{x})=\int\diff^3x\frac{\diff^3p}{(2\pi)^3}f(\vec{x},\vec{p},t)$
+	\\$n(\vec{x})=\int\frac{\diff^3 p}{(2\pi)^3}f \quad \rho(\vec{x})=\stint E f$
+	\\$E=\sqrt{p^2+m^2} \quad P(\vec{x})=\stint \frac{p^2f}{3E}$
+	\\$f=\frac{g}{e^{(E-\mu)/T}\pm 1}$, + F, - B
+	\\equil: $\mu=0 \quad $ rel, eq: $\rho= A\frac{\pi^2}{30}gT^4$, 
+	\\$A_{f/b}=\frac{7}{8},1 \quad g_\gamma=2, g_e=4, g_\nu=6$
+	\\$g_*\equiv\sum\limits_{b, rel}g_i\left(\frac{T_i}{T_\gamma}\right)^4+\frac{7}{8}\sum\limits_{f, rel}g_i\left(\frac{T_i}{T_\gamma}\right)^4$
+	\\$g_*=106.75, 10.75, 3.36 \quad \rho=mn$
+	\\nonrel: $n=g\left(\frac{mT}{2\pi}\right)^{3/2}e^{-(m-\mu)/T}$
+	\\$\diff E =T\diff S - P\diff V + \mu \diff N \quad s=\frac{\rho+P-\mu n}{T}$
+	\\$s\propto a^{-3} \quad g_{*s}\equiv g_*$ but pwr $4\rightarrow 3$
+	\\$g_{*s}a^3T_\gamma^3=const \quad $ KE: $T_i=T_\gamma$
+	\\$P_{rel}=\frac{\rho_{rel}}{3} \quad T < 0.51\text{Mv}: \frac{T_\nu}{T_\gamma}=\left(\frac{4}{11}\right)^{1/3}$
+	\\$H=1.66\sqrt{g_*}\frac{T^2}{m_\text{pl}} \quad a=\frac{T_0}{T}\left(\frac{3.91}{g_{*s}}\right)^{1/3}$
+	\\
+	\\$w_m=0 \quad w_r=1/3$
+}
+\minibox[frame,t]{
+	\textbf{(Unperturbed) Boltzmann Equations}
+	\\$\frac{\text{D}f}{\diff t}=C[f] \quad \Dd=\pdv{f}{t}+\dv{p}{t}\pdv{f}{p} \quad p\propto 1/a:$
+	\\$\rightarrow \dot{p}=-Hp:$
+	\\$\stint \Dd = \dv{n}{t}+3Hn=\stint C[f]$
+	\\Collisionless: $\dv{n}{t}+3Hn=0=\frac{1}{a^3}\dv{(na^3)}{t}$
+	\\$1+2 \Leftrightarrow 3+4: \quad \frac{1}{a^3}\dv{(na^3)}{t}=$
+	\\$=\int\frac{\diff^3p_1}{(2\pi)^32E_1}\int\frac{\diff^3p_2}{(2\pi)^32E_2}\int\frac{\diff^3p_3}{(2\pi)^32E_3}\int\frac{\diff^3p_4}{(2\pi)^32E_4}$
+	\\$\times (2\pi)^4\delta^3(\vec{p}_1+\vec{p}_2-\vec{p}_3-\vec{p}_4)\delta(E_1+E_2-E_3-E_4)$
+	\\$\times \abs{\mathcal{M}}^2[f_3f_4-f_1f_2]$
+	\\$\int\frac{\diff^4 p}{(2\pi)^4}\equiv\int\frac{\diff^3 p\diff E}{(2\pi)^4}\delta(E^2-(p^2+m^2))
+	\dv{E}{E^2}\frac{1}{2E}$
+	\\KE, $e^{(E-\mu)/T}\gg \pm 1: f\rightarrow e^{\mu/T}gf_{eq}:$
+	\\$f_3f_4-f_1f_2=e^{-E_{tot}/T}\left(\frac{n_3n_4}{n_3^{eq}n_4^{eq}}-\frac{n_1n_2}{n_1^{eq}n_2^{eq}}\right)$
+	\\$\frac{1}{a^3}\dv{(na^3)}{t}=n_1^{eq}n_2^{eq}\left(\frac{n_3n_4}{n_3^{eq}n_4^{eq}}-\frac{n_1n_2}{n_1^{eq}n_2^{eq}}\right)\left<\sigma v\right>:$
+	\\$\sim Hn_1=n_1n_2\cs\sim\Gamma n_1 \quad H\ll\Gamma: (\cdots)=0 $
+	\\$H\gg \Gamma: n\propto a^{-3}$
+	\\$\Gamma_1=n_\text{target (2)}\cs=H$
+	\\\textbf{Dark Matter Freezeout (FO)}
+	\\$\chi+\chi \Leftrightarrow \gamma\gamma \quad $(TE$\equiv$KE). assume $1\equiv 2 \rightarrow$
+	\\$n_1n_2=n_\chi^2 \quad$ FO: $H(T_f)=\Gamma=n_\chi^{eq}\cs\equiv n_\chi\cs$
+	\\$\rho_{\chi,0}=\rho_{\chi,f}a^3_f \quad$FO: $T=m_\chi \quad T\simeq\frac{m_\chi}{20}$
+	\\$\Omega_\chi=\frac{0.3}{h^2}\left(\frac{m_\chi/T_f}{10}\right)\frac{10^{-37}\text{cm}^2}{\cs}$
+	\\$\cs=G_F^2(4 \text{ GeV})^2\simeq 3\times 10^{-26}\frac{\text{cm}^3}{\text{s}}$
+	\\nonrel: $n_{eq}=g\left(\frac{mT_f}{2\pi}\right)^{3/2}e^{-m/T_f}$
+	\\\textbf{BBN Stage 1: n-p Freezeout}
+	\\($t\sim 1$ s), 
+	\\still radiation dominated$\quad$ $e^\pm,\nu$ in eq: $g_*=10.75$
+	\\$pn,\bar{p}\bar{n}$ annihilated, leftover $p,n$:
+	\\$\nu+n\Leftrightarrow p+e^- \quad \& \quad e^++n\Leftrightarrow p +\bar{\nu}$
+	\\$e^\pm,\nu$ in eq: $\frac{n_n}{n_p}=\frac{n_n^{eq}}{n_p^{eq}}=\left(\frac{m_n}{m_p}\right)^{3/2}e^{-Q/T}$
+	\\$Q=m_n-m_p= 1.293$ MeV
+	\\p-n FO: $\Gamma_{p\leftrightarrow n}=\frac{14}{\tau_n}\left(\frac{T}{m_e}\right)^5=H$
+	\\$T_f=0.8\text{ MeV}\left(\frac{g_*}{10.75}\right)^{1/6}\left(\frac{\tau_n}{886\text{ s}}\right)^{1/3}$
+	\\$X_n\equiv \frac{n_n}{n_n+n_p} = 0.166$ normally
+	\\\textbf{BBN Stage 2: Nucleosynthesis}
+	\\Next ($t\sim 270$ s), (He forms)
+	\\$n+p \Rightarrow D \quad \& \quad D+D\Rightarrow ^3\text{He}+n \quad \&$
+	\\$\& \quad ^3\text{He}+D\Rightarrow ^4\text{He} + p \quad g_D=3$
+	\\$Y_\text{He}\equiv\frac{4n_\text{He}}{n_n+n_p}\simeq\frac{4\left(\frac{1}{2}n_n\right)}{n_n+n_p}=2X_n$\textbf{?} (all $n\rightarrow$He)
+	\\\textbf{WRONG}; from 1 to 270 s, $n$ decayed:
+	\\$Y_\text{He}=2X_n(t_D)=2X_n(T_f)e^{-(t-t_f)/\tau_n}=0.24$
+	\\$n+p\leftrightarrow D +\gamma:$
+	\\$n_D=n_pn_n\frac{g_D\left(\frac{m_DT}{2\pi}\right)^{3/2}e^{-m_D/T}}{g_ng_p\left(\frac{m_NT}{2\pi}\right)^3e^{-(m_n+m_p)/T}}$
+	\\$n_D=X_nX_pn_b^2\frac{3}{4}\left(\frac{2\pi(2m_N)}{m_N^2T}\right)^{3/2}e^{B/T}$
+	\\$N\equiv$nucleon, $m_D=2m_N$
+	\\$B=$binding E$\equiv m_p+m_n-m_d\simeq 2.22$ MeV
+	\\$X_d\equiv\frac{2n_D}{n_b}=X_nX_p\eta n_\gamma\frac{3}{2}\left(\frac{4\pi}{m_NT}\right)^{3/2}e^{B/T}$
+	\\$n_\gamma=\frac{\zeta(3)}{\pi^2}2 T^3 \quad \eta=n_b/n_\gamma\simeq5.5\times10^{-10} \frac{\Omega_bh^2}{0.020}$
+	\\$X_D=16.3X_nX_p\eta\left(\frac{T}{m_N}\right)^{3/2}e^{B/T}$
+	\\eventually these FO: $D+D\Leftrightarrow ^3\text{He} + \eta + \gamma \quad \&$
+	\\$\& ^3\text{He} + D \Leftrightarrow ^4\text{He}+p$
+	\\\textbf{Messing with BBN}
+	\\BBN depends on:
+	\\\textbf{1)} $\Omega_bh^2 \uparrow \Rightarrow D$ forms earlier $\Rightarrow$ $n$: less t to dcy$\Rightarrow$
+	\\$\Rightarrow$ more He. Also $\Rightarrow$ later $D+D\rightarrow \text{He}$ FO $\Rightarrow$
+	\\less $D$
+	\\\textbf{2)} (nuclear physics/weak interactions):
+	\\$\Gamma_{p\leftrightarrow n\nu}\propto G^2_F, \tau_n\propto G^{-2}_F$
+	\\if $G_F\downarrow \Rightarrow \Gamma_{pe\leftrightarrow n\nu}\downarrow\Rightarrow$n FO earlier$\Rightarrow$ more $n$
+	\\also $\Gamma_{pe\leftrightarrow n\nu}\downarrow\Rightarrow$ fewer $n$ decays$\Rightarrow$ more $n$
+	\\both more $n$ $\Rightarrow$ more He
+	\\\textbf{3)} (other rel. content of univ):
+	\\for $T>m_e \Rightarrow g_*=10.75 + 2\frac{7}{8}(N_\nu-3)$
+	\\$N_\nu \uparrow \Rightarrow g_*\uparrow \Rightarrow H\uparrow \Rightarrow$ earlier FO $\Rightarrow$ more $n$
+	\\also $g_*\uparrow \Rightarrow$ $\rho\uparrow\Rightarrow H\uparrow$ and $\rho\uparrow\Rightarrow$ earlier FO 
+	\\also $H\uparrow\Rightarrow$ decreasing t of $T=0.07$ MeV$\Rightarrow$
+	\\$\Rightarrow$ more $n$ $\Rightarrow$ more He
+	\\
+	\\$\eta_{FO}\neq\eta_{today}$
+
+}
+\minibox[frame,t]{
+	\textbf{Recombination}
+	\\$T\gtrsim$eV: $e^-+p\Leftrightarrow H+\gamma \quad n_H \ll n_e\sim n_p$
+	\\need $\cs$ for $n=2$ since $n=1$ effectless
+	\\$H_{n=2}\Rightarrow H_{n=1}+\gamma \quad X_e\equiv\frac{n_e}{n_e+n_H}=\frac{n_e^{free}}{n_e^{tot}}$
+	\\$\frac{X_e^2}{1-X_e}=\frac{n_en_p}{n_Hn_\gamma\eta} \quad n_b=n_p+n_H \quad g_H=4$
+	\\$\frac{n_en_p}{n_\gamma n_H}$ in eq: $\frac{n_H}{n_H^{eq}}=\frac{n_en_p}{n_e^{eq}n_p^{eq}}\Rightarrow \hspace{2cm}$
+	\\$\frac{n_en_p}{n_H}=\left(\frac{m_em_p}{m_H}\frac{T}{2\pi}\right)^{3/2}\times e^{(m_H-m_p-m_e)/T}$
+	\\$\frac{X_e^2}{1-X_e}=\frac{1}{\eta}\frac{\pi^2}{2\zeta(3)T^3}\left(\frac{m_eT}{2\pi}\right)^{3/2}e^{-B_H/T}$
+	\\$B_H=m_p+m_e-m_H=13.6$ eV $\quad X_e\in[0,1]$
+	\\Saha: $\frac{X_e^2}{1-X_e}=\frac{0.26}{\eta}\left(\frac{m_e}{T}\right)^{3/2}e^{-B_H/T}$
+	\\\textbf{CMB}
+	\\Photon scattering: $\gamma + e^- \Rightarrow \gamma + e^-$
+	\\(free $n$ all decayed)
+	\\$\Gamma=n_e\sigma_Tc=\frac{n_e}{n+p+n_H}n_b\sigma_T=X_en_b\sigma_T$
+	\\$\Gamma <H$: scatter stop:
+	\\$\frac{\Gamma}{H}=\frac{n_b\sigma_T}{H}X_e=113 X_e\left(\frac{1+z}{1000}\right)^{3/2}$
+	\\$\Rightarrow \Gamma > H$ if $X_e\simeq 1$ at $z\gtrsim 1000$
+	\\$\Gamma < H$ if $X_e \ll 1$ at $z\lesssim 1000$
+	\\\textbf{CMB Mysteries (Lead to Inflation)}
+	\\\textbf{1)} Horizon Problem: homogeneous universe 
+	\\but should be causally disconnected
+	\\\textbf{2)} CMB: very nearly flat univ
+	\\$\Omega_k=1-\Omega_{tot} \quad 1=\Omega_{tot}(a)-\frac{k}{a^2R_c^2H^2}$
+	\\$\dv{}{t}|\Omega_k| =-2\frac{\ddot{a}}{\dot{a}^3}\frac{1}{R_c^2}>0$ without inflation
+	\\\textbf{3)} Initial Fluctuations: CMB flucs w/ 
+	\\angular size $\gg$ horizon size
+	\\\textbf{Inflation Motivations}
+	\\soln to \textbf{1)}: $\ddot{a}>0 \Rightarrow \dv{}{t}\abs{\Omega_k}<0$ 
+	\\so can make univ arbitrarily flat initially
+	\\comoving Hubble radius $\equiv 1/(aH)$
+	\\\textit{largest scale at which physics can happen at some time}
+	\\$\dv{}{t}\left(\frac{1}{aH}\right)=-\frac{\ddot{a}}{\dot{a}^2}$
+	\\H const$\rightarrow \chi_{hor}=\int_0^a\frac{\diff(\ln a')}{a'h(a')}$ diverges
+	\\longer D prod. equil$:$ less $D$ left
+	\\\textbf{``Derivation'' of the Inflaton}
+	\\Need $P < -\rho/3$ for $\ddot{a} <0$ from Friedmann 2
+	\\$S_{EH}=\frac{1}{16\pi G}\int\sqrt{-g}R\diff^4 x$
+	\\$\delta S_{EH}=\frac{1}{16\pi G}\int\diff^4 x\sqrt{-g}\left[R_{\mu\nu}-\frac{1}{2}Rg_{\mu\nu}\right]\delta g_{\mu\nu}$
+	\\add $S_\text{matter}$ to $S_{EH}$ gives $S_{tot}$
+	\\$\delta S_{tot}=\int\diff^4 x\sqrt{-g}\left[\frac{G_{\mu\nu}}{16\pi G}+\frac{\delta\mathcal{L}_m}{\sqrt{-g}\delta g_\mu\nu}\right]\delta g_{\mu\nu}=0$
+	\\EOM: $G_{\mu\nu}=-16\pi G \frac{\delta \mathcal{L}_m}{\sqrt{-g}8g_{\mu\nu}}\equiv 8\pi G T_{\mu\nu}$
+	\\$T_{\mu\nu} = \frac{-2}{\sqrt{-g}}\frac{\delta\mathcal{L}_m}{\delta g^{\mu\nu}}$
+	\\$S_\phi=\int\diff^4 x \left[\sqrt{-g}\left(-\frac{1}{2}g^{\mu\nu}\nabla_\mu\phi\nabla_\nu\phi - V(\phi)\right)\right]$
+	\\$T_\nu^\mu=g^{\alpha\mu}\nabla_\alpha\phi\nabla_\nu\phi-\delta_\nu^\mu\left(\frac{1}{2}\nabla^\alpha\phi\nabla_\alpha\phi + V\right) \quad g^\mu_\nu=\delta^\mu_\nu$
+	\\$\rho= \frac{1}{2}\dot{\phi}^2 + V(\phi) \quad P =\frac{1}{2}\dot{\phi}^2 - V(\phi) \quad \ddot{\phi}+3H\dot{\phi} + V'(\phi)=0$
+	\\\textbf{The Evolution of Inflation}
+	\\\vspace{0.1cm}$\frac{\ddot{a}}{a}=H^2+\dot{H} \quad \varepsilon_H\equiv -\frac{\dot{H}}{H^2} \quad \dot{H}=-4\pi G\dot{\phi}^2 \quad $SR: $\varepsilon_H,\eta_H \ll 1$
+	\\$V\gg \dot{\phi}^2: w \simeq -1 \quad$SR: $\ddot{\phi}\ll 3H\dot{\phi}: \quad 3H\dot{\phi}\simeq - V'(\phi)$
+	\\$\eta_H\equiv-3\frac{\ddot{\phi}}{3H\dot{\phi}} \quad$ ``eta problem'': tough to make infl model 
+	\\with SR conds. $\quad$SR: $H^2\simeq \frac{8\pi G}{3}V\quad \varepsilon_V\equiv \frac{1}{16\pi G}\left(\frac{V'}{V}\right)^2\simeq \varepsilon_H$ 
+	\\$\eta_V\equiv\frac{1}{8\pi G}\frac{V''}{V} \quad \eta_H\simeq\eta_V-\ve_H$
+	\\SR stops @ $1=\ve_V$
+	\\1) Chaotic infl: inflaton could get up initially from qntm fluc,
+	\\but lack of prim. grav. waves ruled this out
+	\\2) New infl: high $\rho$ gives quadratic $V$
+	\\3) Eternal inf: tunnel into inflation, multiverse
+	\\$\frac{1}{aH} \propto \sqrt{a}$ in MD, $\propto a$ in RD, $\propto a^{-1}$ in ID. $i$ is begin of infl
+	\\Solve Horizon Prblm: $\frac{1}{a_iH_i}\geq \frac{1}{a_0H_0} \Rightarrow \frac{a_eH_e}{a_iH_i}\geq \frac{a_eH_e}{a_0H_0}$
+	\\Quadratic Inflaton: $\ln(a_e/a_i)\geq 60\Rightarrow $
+	\\$\ln(a_e/a_i)\equiv\int_{a_i}^{a_e}\frac{\diff a}{a}\equiv \int_{t_i}^{t_e}\frac{\dot{a}}{a}\diff t\equiv \int_{\phi_i}^{\phi_e}H\frac{\diff\phi}{\dot{\phi}}$
+	\\\textbf{After Inflation}
+	\\Out of SR: $\phi$ oscillates, $V\simeq\frac{1}{2}m^2\phi^2$
+	\\$\ddot{\phi}+3H\dot{\phi}+m^2\phi=0 \quad H\downarrow\Rightarrow \ddot{\phi}\rightarrow-m^2\phi\Rightarrow \phi=\phi_0\sin(mt)$
+	\\$\left<V\right>=\frac{1}{2}m^2\left<\phi^2\right>=\frac{1}{4}m^2\phi_0^2 \quad \left< T\right> \sim \left<\frac{1}{2}\dot{\phi}^2\right>=\frac{1}{4}m^2\phi_0^2$
+	\\$P=T-V=0$ so it's matterlike: $\rho_\phi\simeq a^{-3}$
+	\\Energy trans to reheating: $\dot{\rho}_\phi+3H\rho_\phi=-\Gamma_\phi\rho_\phi$
+	\\$\dot{\rho}_r+4H\rho_r=\Gamma_\phi \rho_\phi$
+	
+	
+}
+\newpage
+\hspace{-0.5cm}
+\minibox[frame,t]{
+	\textbf{Perturbation Theory}
+	\\$\diff s^2=-(1+2A)\diff t^2 - 2aB_i\diff x^i \diff t$
+	\\$+ a^2(t)\left[\delta_{ij}(1+2\phi)+2E_{ij}\right]\diff x^i\diff x^j$
+	\\$\vec{B}=\vec{\nabla} B+\vec{B}_\perp \quad E_{ij}\equiv E_{ij}^\parallel+E_{ij}^\perp+E_{ij}^\text{TT}$
+	\\grav wave along $z$: $E_{ij}^\text{TT}=$
+	$\begin{pmatrix}
+		h_+ & h_\times & 0 \\
+		h_\times & -h_+ & 0 \\
+		0 & 0 & 0
+	\end{pmatrix}$
+	\\\textbf{Gauge Freedom:} 
+	\\$t\rightarrow \hat{t}+\xi^0(t,\vec{x}) \quad \vec{x}+\hat{\vec{x}}=\vec{x}+\vec{\xi}(t,\vec{x})$
+	\\$\vec{\xi}=\vec{\nabla}\xi+\vec{\xi}_\perp$
+	\\$\hat{g}_{\mu\nu}=\left[\delta_\mu^\alpha-\delta_\mu\xi^\alpha\right]\left[\delta_\nu^\beta-\hat{\delta}_\nu\xi^\beta\right]g_{\alpha\beta}$
+	\\in general, can set 2 scalar perts to 0
+	\\and 2 DOF of metric perts to 0
+	\\\textbf{1)} Synchronous Gauge: $A=B=\vec{B}_\perp=0$
+	\\\textbf{2)} Poisson Gauge: $B=E=\vec{E}^\perp=0$
+	\\$\rho=\bar{\rho}(t)+\delta\rho(t,\vec{x}) \quad P=\bar{P}(t)+\delta P(t,\vec{x})$
+	\\$\diff s^2=-(1+2A)\diff t^2-2aa_iB\diff t\diff x^i$
+	\\$+a^2\left[\delta_{ij}\left(1+2\phi\right)-2\left(\nabla_i\nabla_j-\frac{1}{3}\nabla^2\right)E\right]$
+	\\Bardeem 1: $\Phi_A=A+\frac{1}{a}\pdv{}{\tau}[aE'-B]$
+	\\Bardeem 2: $\Phi_H=-\phi +aH[B-E']$
+	\\\textbf{Dodelson Gauge}
+	\\$A=\Psi \quad \phi=\Phi \quad E=B=0$
+	\\\textit{DIAGONAL!}
+	\\$\diff s^2=-(1+2\Psi)\diff t^2 + a^2\delta_{ij}(1+2\Phi)\diff x^i\diff x^j$
+	\\$G^{\mu\nu}=8\pi G T^{\mu\nu} \quad \delta G^{\mu\nu}=8\pi G \delta T^{\mu\nu}$
+	\\$\bar{G}^{\mu\nu}+\delta G^{\mu\nu}=8\pi G\left(\bar{T}^{\mu\nu}+\delta T^{\mu\nu}\right)$
+	\\$f(\vec{x})=\int\frac{\diff^3k}{(2\pi)^3}e^{i\vec{k}\cdot\vec{x}}\tilde{f}(\vec{k}) \quad \delta G_0^0=8\pi G \delta T_0^0:$
+	\\$-\nabla^2\Phi+3aH(\Phi'-aH\Phi)=4\pi Ga^2\delta\rho$
+	\\FT: $k^2\tilde{\Phi}+3aH(\tilde{\Phi}'-aH\tilde{\Phi})=4\pi G a^2\tilde{\delta\rho}$
+	\\\textbf{subhorizon}: $\lambda \ll \frac{1}{aH}$: newtonian gravity
+	\\\textbf{superhorizon}: $\lambda \gg \frac{1}{aH}$: non-Newt grav
+	\\take $\nabla_i\nabla_j-\frac{1}{3}\delta_{ij}\nabla^2$ both sides of $ii$ eqn:
+	\\get $\tilde{\Phi}=-\tilde{\Psi}. \quad \tilde{v}_B\equiv ik\tilde{B}+\frac{k^i\tilde{T}_i^0}{ka(\bar{\rho}+\bar{P})}$
+	\\$\zeta\equiv-\Phi_H-\frac{iaH}{k}v_B$ (Dropping $\sim$)
+	\\\textit{curvature of uniform density slices}
+	\\superhrzn: $k \ll aH$: $\zeta = \phi -H\frac{\delta\rho}{\dot{\bar{\rho}}}$
+	\\Adiabatic:  $\zeta_{rad}=\zeta_{mat}=\zeta_i$
+	\\Isocurvature (opp): $\bar{\rho}=$const
+	\\adiabatic$\Rightarrow \zeta$ const on superhrzn
+	\\\textbf{Perturbations from Inflation}
+	\\our gauge: $\delta\phi=E=0 \quad T_i^0=0 \quad \zeta=\Psi$
+	\\$\diff s^2=-(1+2A)\diff t^2 - 2aa_iB\diff t\diff x^i$
+	\\$+ a^2\left[\delta_{ij}(1+2\zeta)\diff x^i\diff x^j\right]$
+	\\vary $S$: gives $A, B$, can plug back into $S$
+	\\$S^{(2)}=\frac{1}{2}\int\diff^4x\frac{\dot{\phi}^2}{H^2}\left[a^3\dot{\zeta}^2-a(\partial_i\zeta\partial_i\zeta)\right]$
+	\\\textbf{Step 1: EOM for $\zeta$}
+	\\$S^{(2)}=\frac{1}{2}\int\diff t\diff^3xa^3\left(\frac{\dot{\phi}}{H}\dot{\zeta}\right)^2-a\left[\vec{\nabla}\left(\frac{\dot{\phi}}{H}\zeta\right)\right]^2$
+	\\$f\equiv\frac{\dot{\phi}}{H}\zeta$: $S\simeq \frac{1}{2}\int\diff t\diff^3xa^3\dot{f}^2-a(\vec{\nabla}f)^2$
+	\\$\diff\tau\equiv\diff t/a \quad f'=a\dot{f} \quad v\equiv af$
+	\\$S=\int\diff\tau\diff^3x\left[\frac{1}{2}(v')^2-\frac{1}{2}(\vec{\nabla}v)^2+\frac{a''}{a}v^2\right]$
+	\\vary wrt $v$: $v''-\nabla^2v-\frac{a''}{a}v=0$
+	\\\textbf{Step 2: Use sbhrzn QFT to get $\zeta$ flucs}
+	\\$\Pi=\pdv{\mathcal{L}}{v'}=v' \quad [v(\vec{x}),v'(\vec{y})]=i\delta^3(\vec{x}-\vec{y})$
+	\vspace{0.05cm}
+	\\$[\hat{a}_{\vec{k}}, \hat{a}_{\vec{k}'}^\dagger]=(2\pi)^3\delta^3(\vec{k}-\vec{k}') \quad \bra0\hat{a}_{\vec{k}}^\dagger=0 \quad \hat{a}_{\vec{k}}\ket{0}=0$
+	\\$\hat{v}(\tau,\vec{x})\equiv\int\frac{\diff^3k}{(2\pi)^3}\left[v_k(\tau)e^{-\vec{k}\cdot\vec{x}}\hat{a}_{\vec{k}}+v_k^*(\tau)e^{-i\vec{k}\cdot\vec{x}}\hat{a}_{\vec{k}}^\dagger\right]$
+	\\plug into EOM, go to Fourier space
+	\\$v_k''(\tau)+\left(k^2-\frac{a''}{a}\right)v_k(\tau)=0 \quad \omega^2\equiv k^2-\frac{a''}{a}$
+	\\during infl: $\frac{a''}{a}=2a^2H^2 \quad k\gg aH:$
+	\vspace{0.05cm}
+	\\$\omega=k v_k''+\omega^2v_k=0$
+	\\from commutators: $v_kv_k^{*'}-v_k^*v_k'=i$
+	\vspace{0.05cm}
+	\\$v_k=Ae^{-i\omega\tau}+Be^{i\omega\tau} \quad A^2-B^2=\frac{1}{2\omega}$
+	\\$v_k''+V'(v_k)=0\Rightarrow V(v_k)=\frac{1}{2}\omega^2v_k^2\Rightarrow$
+	\\$E_k=\frac{1}{2}\abs{v_k'}^2+\frac{1}{2}\omega^2\abs{v_k}^2=\omega^2\left[\frac{1}{2\omega}+2B^2\right]$
+	\\$B=0: E_{min}\Rightarrow A=\frac{1}{\sqrt{2\omega}}\Rightarrow$
+	\\$v_k=\frac{1}{\sqrt{2\omega}}e^{-i\omega\tau}\simeq\frac{1}{\sqrt{2k}}e^{-i\omega\tau}$
+	\\\textbf{Step 3: Use EOM to get $\zeta$ at hrzn exit}
+	\\superhrzn: $k\ll aH$. Inflation: $\tau=-\frac{1}{aH}$
+	\\$v_k''+\left(k^2-\frac{2}{\tau^2}\right)v_k=0\Rightarrow v_k=\frac{e^{-k\tau}}{\sqrt{2k}}\left[1-\frac{i}{k\tau}\right]$
+	\\sprhrzn: $k\tau \ll 1$: $\abs{v_k^{spr}}^2=\frac{1}{2k^3\tau^2}=\frac{a^2H^2}{2k^3}\Rightarrow$
+	\\$\abs{f_k^{spr}}^2=\frac{H^2}{2k^3}\equiv \abs{\delta\phi_k^{spr}}^2 \quad \hat{v}_k\equiv v_k\hat{a}_{\vec{k}}+v_{-k}\hat{a}_{-\vec{k}}^\dagger:$
+	\\$\sigma_{v_k}^2=\bra{0}v_k^\dagger v_k\ket{0}=(2\pi)^3\abs{v_{-\vec{k}}}^2$
+	\\$\left<\hat{v}_k^\dagger\hat{v}_{k'}\right>\equiv(2\pi)^3\delta^3(\vec{k}-\vec{k}')P(k) \quad P(k)=\abs{v_k}^2$
+	\\$(2\pi)^3P_v(k)\sim \overline{(\delta v_k)^2}$
+	\\$\left<\hat{v}(\vec{x})\hat{v}(\vec{y})\right>\equiv\int\frac{\diff k}{k}\left(\frac{k^3P_v}{2\pi^2}\right)\frac{\sin kr}{kr}$
+}
+\minibox[frame,t]{
+	\textbf{Power Spectra for Inflation}
+	\\$f=\frac{\dot{\phi}}{H}\zeta \quad \abs{f_k}^2=\frac{H^2}{2k^3}= P_f(k)$
+	\\$\mathcal{P}_f(k)=\frac{k^3}{2\pi^2}P_f(k)=\left(\frac{H}{2\pi}\right)^2$
+	\\$\mathcal{P}_\zeta=\frac{G}{\pi\ve_H}H^2=\frac{1}{\pi\epsilon_H}\left(\frac{H^2}{m_\text{pl}^2}\right)\bigg\rvert_{k=aH}$
+	\\\textit{$\zeta$ const wrt time}
+	\\$n_s-1\equiv\dv{\ln \mathcal{P}_\zeta}{\ln k}=-4\ve_H+2\eta_H$
+	\\$n_s=1:$ scale-inv perts
+	\\$\mathcal{P}_\zeta=A_s\left(\frac{k}{k_0}\right)^{n_s-1} \quad \alpha_s=\dv{n_s}{\ln k}$
+	\\\textbf{Tensors from Inflation}
+	\\flat, vacuum metric: $-\partial_t^2h_{ij}+\nabla^2h_{ij}$
+	\\$h_{+,\times}''+2\frac{a'}{a}h_{+,\times}'+k^2h_{+,\times}=0$
+	\\do same process with $S$, let $f\equiv\frac{h_{+,\times}}{\sqrt{16\pi G}}$
+	\\gives $P_{h_+}=P_{h_\times}=16\pi G\left(\frac{H^2}{2k^3}\right)$
+	\\$P_h\equiv4P_{h_+}=16\ve_HP_\zeta\Rightarrow r\equiv\frac{P_h}{P_\zeta}=16\ve_H$
+	\\\textbf{The Case for Inflation}
+	\\$\zeta=n_s-1+\frac{1}{2}\alpha_s\ln\frac{k}{k_0} \quad H^2=\frac{8\pi V}{3m^2_\text{pl}}$
+	\\\textit{$\zeta$ re-enter horizon:}
+	\\$3\Psi H^2-\frac{k^2}{a^2}\Phi-3\dot{\Phi}=-4\pi G \delta \rho$
+	\\subhrzn: $-\frac{k^2}{a^2}\Phi=-4\pi G\delta\rho$
+	\\sprhrzn: $\dot{\Phi}=0 \quad \delta\rho=\Psi\left(-\frac{3H^2}{4\pi G}\right)=\Psi(-2\rho)$
+	\\$\delta\equiv\frac{\delta\rho}{\rho}=-2\Psi\quad\zeta=\Phi-H\frac{\delta\rho}{\dot{\rho}}=\Phi+\frac{\delta}{3(1+w)}$
+	\\$\zeta=\Phi+\frac{2\Phi}{3(1+w)} \quad$consider $e$ baryons
+	\\\textbf{Perturbed Boltzmann Equations}
+	\\$f(\vec{x},\vec{p},t)\equiv f(\vec{x},p,\hat{p}^i,t)$
+	\\$\frac{\text{D}f}{\diff t}=0=\pdv{f}{t}+\pdv{f}{x^i}\dv{x^i}{t}+\pdv{f}{p}\dv{p}{t} + \mathcal{O}(2)$
+	\\$\dv{x^i}{t}=P^i/P^0 \quad p^2=P^iP^jg_{ij}-P^iP^ja^2(1+2\Phi)\delta_{ij}$
+	\\$P^\mu P^\nu g_{\mu\nu}=-m^2=(P^0)^2g_{00}+p^2$
+	\\Photons: $(P^0)^2=-\frac{p^2}{g_{00}}^2\simeq p^2(1-2\Psi)$
+	\\$\dv{x^i}{t}=\frac{\hat{p}^i}{a}(1-\Phi+\Psi)$
+	\vspace{0.05cm}
+	\\\textbf{Temp Perts (Photons)}
+	\\photons: $f(\vec{x},p,\hat{p},t)\equiv\frac{1}{e^{p/T(1+\Theta)}-1}$
+	\\$\Theta=\frac{\Delta T}{T}(\vec{x},p,\hat{p},t) \quad$Thompson sct: $\Theta\simeq\frac{\Delta T}{T}(\vec{x},\hat{p},t)$
+	\\$f(\Theta)=f^{(0)}+\Theta\pdv{f}{\Theta}\evalat{\Theta=0}=f^{(0)}-p\pdv{f^{(0)}}{p}\Theta$
+	\\Z.O: $\Dv=\pdv{f^{(0)}}{t}-Hp\pdv{f^{(0)}}{p}$
+	\\F.O: $\Dv=-p\pdv{f^{(0)}}{p}\left[\pdv{\Theta}{t}+\frac{\hat{p}^i}{a}\pdv{\Theta}{x^i}+\pdv{\Phi}{t}+\frac{\hat{p}^i}{a}\pdv{\Psi}{x^i}\right]$
+	\\\textit{=0 for neutrinos; don't collide}
+	\\\textbf{Massive Particles}
+	\\$f(\vec{x},E,\hat{p},t) \quad E^2=p^2+m^2$
+	\\$\Dv=\pdv{f}{t}+\frac{\hat{p}^i}{a}\frac{p}{E}\pdv{f}{x^i}-\pdv{f}{E}\left[H\frac{p^2}{E}+\frac{p^2}{E}\pdv{\Phi}{t}+\frac{\hat{p}^i}{a}p\pdv{\Psi}{x^i}\right]$
+	\\int. over $\stint$: $\dot{n}+\frac{1}{a}\pdv{(nv^i)}{x^i}+\left[H+\pdv{\Phi}{t}\right]3n=0$
+	\\\textit{(=0 for collisionless)} $\quad \delta_m=\frac{3}{4}\delta_r$
+	\\$\delta=\frac{\delta n}{\bar{n}} \quad n=\bar{n}+\delta n = \bar{n}[1+\delta] \quad$Z.O: $\dot{\bar{n}}+3H\bar{n}=0$
+	\\\textbf{Electron-Photon Interactions}
+	\\$e^-(\vec{q})+\gamma(\vec{p})\Leftrightarrow e^-(\vec{q}')+\gamma(\vec{p}') \quad E_e\sim m_e$
+	\\$\frac{\abs{\mathcal{M}}^2}{m_e^2}=8\pi \sigma_T$
+	\\$\Theta_0(\vec{x},t)=\frac{1}{4\pi}\int\sin\Theta_p\diff\Theta_p\diff\phi_p\Theta(\vec{x},\hat{p},t)$
+	\\$\sim$ avg of $\frac{\Delta T}{T}$ over all directions
+	\\$\dot{\Theta}+\frac{\hat{p}^i}{a}\pdv{\Theta}{x^i}+\dot{\Phi}+\frac{\hat{p}^i}{a}\pdv{\Psi}{x^i}=n_e\sigma_T\left[\Theta_0-\Theta + \hat{p}\cdot\vec{v}_b\right]$
+	\\Go to Fourier: $\mu\equiv \hat{p}\cdot\hat{k} \quad \Theta\propto e^{i\vec{k}\cdot\vec{x}}\Theta(\vec{k})$
+	\\$\Theta'+ik\mu\Theta +\phi'+ik\mu\Psi=n_e\sigma_Ta[\Theta_0-\Theta+v_b\mu]$
+	\\$\Theta_\ell\equiv\frac{1}{(-i)^\ell}\int_{-1}^1\frac{\diff\mu}{2}\mathcal{P}_\ell(\mu)\Theta(\mu)$
+	\\int PDE over $\mu/\diff\Omega$: 
+	\\$\Theta_0'+k\Theta_1+\Phi'=n_e\sigma_Ta[\Theta_0-\Theta_0+0]$
+	\\int again:
+	\\$\Theta_1'-\frac{k}{3}\Theta_0-\frac{k}{3}\Psi+\frac{2}{3}k\Theta_2=n_e\sigma_Ta\left[\frac{i}{3}v_b-\Theta_1\right]$
+	\\only care about $\gamma$: mfp short: ignore $\Theta_{2+}$.
+	\\\textbf{Just before horizon re-entry} (superhorizon)
+	\\$k\ll aH \Rightarrow k\rightarrow 0 \quad n_e\sigma_Tc\gg H: \Theta_1=\frac{i}{3}v_b$
+	\vspace{0.05cm}
+	\\$\delta_{dm}'+3\Phi'=0 \quad \delta_{b}'+3\Phi'=0 \Rightarrow \delta_{dm}+\delta_b+C_1$
+	\\$\Theta_0'+\Phi'=0 \quad \mathcal{N}_0'+\Phi'=0 \Rightarrow \Theta_0=\frac{1}{3}\delta_{dm}+C_2,$
+	\vspace{0.05cm}
+	\\$\mathcal{N}_0=\Theta_0+C_3 \quad \Theta_0=\frac{\Delta T}{T}=\frac{1}{4}\delta_\gamma$
+	\\adiabatic: $C_i=0\Rightarrow \delta_{dm}=\frac{3}{4}\delta_\gamma$
+	\\EFE: $3\Phi H^2 + \frac{k^2}{a^2}\Phi + 3H\dot{\Phi}=4\pi G \delta\rho$
+	\\early times: $\delta\rho\equiv\delta\rho_r=4(\delta_\nu\mathcal{N}_0+\rho_\gamma\Theta_0)$
+	\\RD: $a\propto\tau\Rightarrow 4\Phi'+\Phi''\tau=0\Rightarrow \Phi=$const \& $\Phi$ decay
+	\\EFE eqn: $\Phi=2\left[f_\nu\mathcal{N}_0+(1-f_\nu)\Theta_0\right]$
+	\\adiabatic: $\mathcal{N}_0=\Theta_0: \Phi=2\Theta_0 \quad \Phi=\frac{2}{3}\delta_{dm}=\frac{2}{3}\delta_b$
+	\\$\Phi\rightarrow\frac{9}{10}\Phi$ for MD$\rightarrow$RD $ \quad f_\nu=\rho_\nu/(\rho_\nu+\rho_\gamma)$
+}
+\minibox[frame,t]{
+	\textbf{Horizon Entry}
+	\\RD: $\ddot{\Theta}_0-\frac{k^2}{3}\Theta_0=0$ (SHO) 
+	\\$\delta_{dm}\propto \log(a)$ from DE $x_{dm}=\int v\frac{\diff t}{a}$
+	\\after entry, $\delta_{dm}\propto a \quad \Phi_p=\frac{2}{3}\zeta$
+	\\(prim: RD superhorizon)
+	\\\textbf{Matter Power Spectrum}
+	\\$\Phi(k,\tau_0)= \Phi_p(k)\frac{\Phi_{spr}(k,\tau_{md})}{\Phi_p(k)}\frac{\Phi(k,\tau_{md})}{\Phi_{spr}(k,\tau_{md})}\frac{\Phi(k,\tau_0)}{\Phi(k,\tau_{md})}$
+	\\\textbf{subhorizon:} $\frac{k^2}{a^2}\Phi=4\pi G\delta\rho$
+	\\\textbf{MD:} gravity wins: $\qquad$ growth factor $D$
+	\\$\Phi(k,\tau_0)=\frac{9}{10}\left(\frac{2}{3}\zeta\right)T(k)\frac{D(a)}{a}$
+	\\$\delta\rho\simeq\rho_m\delta_m \quad \delta_m=\frac{3}{5}\frac{k^2}{\omega_{m,0}H_0^2}\Phi_pT(k)D(a)$
+	\\MD: $\delta_m\propto D(a)=a \quad P=\abs{\tilde{\delta}^2}\Rightarrow$
+	\\$P_{m,0}(k)=\frac{k^4}{H_0^4}\left(\frac{3}{5\Omega_{m,0}}\right)^2\left[\frac{4}{9}\left(\frac{2\pi^3}{k^3}\right)A_s\left(\frac{k}{k_0}\right)^{n_s-1}\right]$
+	\\$\times T^2(k)D^2(a) \quad \propto k^{n_s}T^2(k)D^2(a)$
+	\\$T(k)=1$ for $k<k_{eq}\Rightarrow P_m(k)\propto k^{n_s}$ (large scales)
+	\\small scales (enter during RD): coupled $b,\gamma$:
+	\\$\Theta_1=\frac{i}{3}v_b \quad \Theta_0'+k\Theta_1+-\Phi'\quad \Theta_1'-\frac{k}{3}\Theta_0=-\frac{k}{3}\Phi$
+	\\$v_m'+aHv_ik\Phi \quad \delta_m'+ikv_m=-3\Phi'$
+	\\$k^2\Phi=4\pi Ga\left[\rho_m\delta_m+4\rho_r\Theta_0+\frac{3aH}{k^2}(i\rho_mv + 4\rho_r\Theta_1)\right]$
+	\\\textit{Early Times:} ($\rho_r\gg\rho_m, \rho_r\Theta_0\gg\rho_m\delta_m$)
+	\\$\Phi$ dcy on entry, $\Theta$ oscil, $\delta_{m}(k,\tau)=A\Phi_p(\ln Bk\tau)$
+	\\\textit{Stage 2:} $\rho_m\delta > \rho_r\Theta$, etc: ignore rad perts, use Fried:
+	\\$\dv[2]{\delta}{y}+\frac{2+3y}{2y(y+1)}\dv{\delta}{y}-\frac{3}{2y(y+1)}\delta=0 \quad y=\frac{a}{a_{eq}}$
+	\\(Meszaros; pert evol. inside and outside horizon)
+	\\Solns: RD$(y\ll 1)$: $D_1=$const, $D_2=\frac{2}{3}\ln\frac{4}{y} -$const
+	\\MD $(y\gg 1)$: $D_1=y, D_2=$decaying mode
+	\\$\delta = C_1D_1(a)+C_2D_2(a) \Rightarrow$
+	\\$\delta_{(dm)}(k,a)=\frac{3}{2}A\Phi_p\ln\left[\frac{4B}{e^3}\frac{a_{eq}}{a_{hor}}\right]\frac{a}{a_{eq}} \quad \begin{pmatrix}A=9.11 \\B=0.54\end{pmatrix}$
+	\\MD: $k\gg k_{eq}$: $\frac{a_{eq}}{a_{hor}}=\frac{\sqrt{2}k}{k_{eq}}\Rightarrow $
+	\\$T(k\gg k_{eq})=\frac{12k_{eq}^2}{k^2}\ln\left(\frac{k}{8k_{eq}}\right)\propto\frac{\ln k}{k^2}$
+	\\$P_\delta\propto k^{n_s}\Rightarrow P_\delta\propto\begin{pmatrix}k^{n_s} & k\ll k_{eq}\\\ln^2k/k^{4-n_s}& k\gg k_{eq}\end{pmatrix}$
+	\\$\sigma^2(R)\equiv\left<\delta_R^2\right>=\int\frac{\diff k}{k}\mathcal{P}_\delta(k)F^2(kR)$
+	\\$F\sim\begin{pmatrix}1 & kR\ll 1 \\ 0 & kR\ \gg 1\end{pmatrix} \quad \delta\propto a\Phi \quad$ 
+	\\DE era: $\Phi$ decays, Meszaros Eqn solvable:
+	\\$D_1=\frac{5\Omega_{m,0}}{2}\frac{H(a)}{H_0}\int_0^a\diff a' \left(\frac{a'H(a')}{H_0}\right)^{-3}$
+	\\\textbf{The CMB and Perturbations}
+	\\we see $\Theta(\vec{x}_{here},\tau_0,\hat{p})\equiv\frac{\Delta T}{T}(\theta,\phi) \quad \theta,\phi$ viewing angls
+	\\$\frac{\Delta T}{T}(\theta,\phi)=\sum_{l=0}^\infty\sum_{m=-l}^la_{lm}Y_{lm}(\theta,\phi)$
+	\\$a_{lm}=\int\sin\theta\diff\theta\diff\phi Y^*_{lm}(\theta,\phi)\frac{\Delta T}{T}(\theta,\phi)$
+	\\$=\int_{-1}^1\diff\mu\int_0^{2\pi}\diff\phi Y^*_{lm}(\theta,\phi)\int\frac{\diff^3 k}{(2\pi)^3}e^{i\vec{k}\cdot\vec{x}_0}\Theta(\vec{k},\tau_0,\mu)$
+	\\$\left<a_{lm}\right>=0 \quad \left<a_{lm}a^*_{l'm'}\right>\equiv\delta_{ll'}\delta_{mm'}C_l$
+	\\$\left<\Theta(\vec{k},\hat{p})\Theta^*(\vec{q},\hat{n})\right>\equiv(2\pi)^3P_{\delta,p}(k)\delta^3(\vec{k}-\vec{q})$
+	\\$C_l=\frac{2}{\pi}\int_0^\infty\diff k k^2P_{m,p}(k)\abs{\frac{\Theta_l(k,\tau)_0}{\delta_p(k)}}^2$
+	\\cosmic var: only $2l + 1$ samples per $C_l$
+	\\$\frac{\Delta C_l}{C_l}=\sqrt{\frac{2}{2l+1}} \quad C_l$ domn by $k$ with $l=kx_{cmb}$ 
+	\\but all $k>x_{cmb}$ contribute. sprhrzn at CMB : $l \lesssim 80$
+	\\$E_{obs}=E_{lss}+\Psi \Rightarrow \frac{\Delta T}{T}=\Theta_0(\vec{x}_{lss})+\Psi(\vec{x}_{lss})$
+	\\sprhrzn: $\Theta_0'=-\Phi'$ and RD: $\Phi=2\Theta_0$
+	\\$\Theta_0(k,\tau_{rd})=\frac{1}{2}\Phi_p(k) \quad \Theta_0(\tau)=-\Phi(\tau)+\frac{3}{2}\Phi_p(k)$
+	\\$\Phi_p=\frac{10}{9}\Phi(\tau_*) \quad\hspace{-0.2cm} \Theta_0(\tau_*)=-\frac{2}{3}\Psi(\tau_*) \quad\hspace{-0.2cm} \left(\frac{\Delta T}{T}\right)_{obs}=\frac{1}{3}\Psi(\tau_*)$
+	\\cold spots we see were hotspots.
+	\\Adiabatic: $\delta_{dm}=\frac{3}{4}\delta_\gamma=3\Theta_0\Rightarrow  \left(\frac{\Delta T}{T}\right)_{obs}=-\frac{1}{6}\delta(\tau_*)$
+	\\(SW): $l+(l+1)\frac{\pi}{2}\left(\frac{\Omega_m}{D_1(a_0)}\right)\delta_H^2$
+	\\(subhrzn): TS Boltzmann. $R\equiv\frac{3\rho_b}{4\rho_\gamma}$
+	\\$\ddot{\Theta}_0+aH\left(\frac{R}{1+R}\right)\dot{\Theta}_0+\frac{k^2\Theta_0}{3(1+R)}=F(DM)$
+	\\(slight $\gamma$) forced oscil: $\Theta_0(\tau_*)=A\cos(kc_s\tau)+\frac{F_0}{kc_s}$
+	\\$c_s=\sqrt{\frac{1}{3(1+R)}}=\sqrt{\frac{P}{\rho}}$ also doppler effect seen
+	\\$\lambda^{com}_{mfp}=\frac{1}{n_e\sigma_Ta}\quad \lambda_D\sim\frac{1}{\sqrt{n_e\sigma_Ta^2H}} \quad k\gg 1/\lambda_D$ smooth
+	\\$n_e\uparrow\Rightarrow\lambda_D\downarrow\Rightarrow k_D\uparrow \quad \Delta n_b\Rightarrow c_s$,rebounds, 
+	\\spacing, amplitude, diff tail.
+	\\\textbf{Photons after CMB to us}
+	\\can scatter: op depth
+	\\ISW can come from changing $\Phi$ (dom trans)
+	\\CMB params: $A_s, n_s, \Omega_{cdm}h^2,\Omega_bh^2,\theta_s, \tau$
+	\\($\theta_s\sim d_A\Rightarrow H_0,\Omega_k,\Omega_\Lambda$)
+}
+
+\end{document}
